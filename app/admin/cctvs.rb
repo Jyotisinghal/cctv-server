@@ -3,7 +3,7 @@ ActiveAdmin.register Cctv do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 # permit_params :list, :of, :attributes, :on, :model
-menu :priority => 4, :label => 'CCTV'
+menu :priority => 3, :label => 'CCTV'
 permit_params :product_id, :category, :price
 # or
 #
