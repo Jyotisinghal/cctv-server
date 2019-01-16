@@ -26,9 +26,9 @@
 	
 	<%= render 'item', f: f %>
 	<a class="btn btn-primary proceed" data-toggle="modal" data-target="#customer-model" style="color: white;" id="customerModel" ><i class="fa fa-hand-o-up"></i> PROCEED</a>
-	<div class="modal fade" id="customer-model" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="background-color: rgba(93, 103, 106, 0.31)">
+	<div class="modal fade" id="customer-model" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="background-color: rgba(93, 103, 106, 0.31);margin-top: 140px">
 	    <div class="modal-dialog modal-lg" id= "customermm">
-	      	<div class="modal-content" style="width: 650px;margin: 238px 0 0 6% !important; background-color: #1d1d1e">
+	      	<div class="modal-content" style="background-color: #1d1d1e">
 	        	<div class="container-fluid invoice_wrapper" style="margin:5px">
 	          		<%= render 'customer', f: f %> 
 	        	</div>
