@@ -1,7 +1,7 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
 
-  menu :priority => 1, :label => 'CCTV'
+  menu :priority => 1, :label => 'ADMIN_USER'
 
   index do
     selectable_column
