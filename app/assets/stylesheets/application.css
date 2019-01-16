@@ -1,0 +1,19 @@
+@import "cctvhome";
+
+
+.product-name{
+	background-color: black !important;
+}
+.form-control, 
+.form-control[readonly] {
+  background-color : black;
+  color: white;
+}
+
+.form-group label{
+	color: white;
+}
+
+.customer-details{
+	color: black;
+}

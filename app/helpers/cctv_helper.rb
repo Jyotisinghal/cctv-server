@@ -1,0 +1,2 @@
+module CctvHelper
+end

@@ -1,0 +1,14 @@
+<script>
+  
+  var cctvs = <%= Cctv.all.group_by{|x| [x.product.name, x.product_id].join(":") }.to_json.html_safe %>;
+  var cctvsPrice = <%= Cctv.all.group_by{|x| [x.product.name, x.id].join(":") }.to_json.html_safe %>;
+
+
+$(document).ready(function(){
+  productValues();
+  
+});
+
+</script>
+
+<%= render 'form', customer: @customer %>

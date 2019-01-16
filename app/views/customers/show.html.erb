@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<style>
+  p{
+    color: white;
+  }
+</style>
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @customer.contact %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>ITEMS NAME</th>
+    <th>CATEGORY</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+    <th>TOTAL</th>
+  </tr>
+  </thead>
+
+  <tbody>
+ 
+  <% grandTotal = 0 %>
+  <% @items.each do |item| %>
+   
+    <tr>  
+      <td><%= item.product_name %></td>
+      <td><%= item.cctv.category %></td>
+      <td style="text-align: right;"><%= item.price %></td>
+      <td style="text-align: right;"><%= item.quantity %></td>
+      <% total = item.price.to_i * item.quantity.to_i %>
+      <td style="text-align: right;"><%= total %></td>
+    </tr>
+    <% grandTotal += total %>
+    <% end %>
+   
+   <tr>
+   <td colspan="4"></td>
+   <td style="text-align: right;">GRAND TOTAL: <%= grandTotal %></td>
+   </tr>
+  
+  </tbody>
+</table>
+

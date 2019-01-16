@@ -1,0 +1,101 @@
+<style>
+	
+</style>
+<table class="table">
+	<thead>
+		<tr>
+			<th>ITEM</th>
+			<th>CATEGORY</th>
+			<th>PRICE</th>
+			<th>QTY</th>
+			<th>TOTAL</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<%= f.fields_for :dome_cameras do |dome| %>
+				<td><%= dome.text_field :product_name, :value => "DOME CAMERA", :readonly => true, class: "1 form-control product-name" %></td>
+				<td><%= dome.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "11 category-dropdown form-control", id: "dome-category"} %></td>
+				<td><%= dome.number_field :price, :readonly => true, class: "form-control price dome-camera-price" %></td>
+				<td><%= dome.number_field :quantity, :readonly => true, :value => 1, class: "form-control qty", id: "dome-qty" %></td>
+				<td><span class="total" id="">0</span></td>
+				<%= dome.hidden_field :customer_id %>
+			<% end %>
+		</tr>
+		<tr>
+			<%= f.fields_for :bullet_cameras do |bullet| %>
+				<td><%= bullet.text_field :product_name, :value => "BULLET CAMERA", :readonly => true, class: "2 form-control product-name" %></td>
+				<td><%= bullet.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "12 category-dropdown form-control"} %></td>
+				<td><%= bullet.number_field :price, :readonly => true, class: "form-control price bullet-camera-price" %></td>
+				<td><%= bullet.number_field :quantity, :readonly => true, :value => 1, class: "form-control qty", id: "bullet-qty" %></td>
+				<td><span class="total" id="">0</span></td>
+				<%= bullet.hidden_field :customer_id %>
+			<% end %>
+		</tr>
+		<tr>
+			<%= f.fields_for :dvrs do |dvr| %>
+				<td><%= dvr.text_field :product_name, :value => "DVR", :readonly => true, class: "3 form-control product-name" %></td>
+				<td><%= dvr.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "13 category-dropdown dvr form-control"} %></td>
+				<td><%= dvr.number_field :price, :readonly => true, class: "form-control price" %></td>
+				<td><%= dvr.number_field :quantity, :readonly => true, :value => 1, class: "form-control qty" %></td>
+				<td><span class="total" id="">0</span></td>
+				<%= dvr.hidden_field :customer_id %>
+			<% end %>
+		</tr>
+		<tr>
+			<%= f.fields_for :smpss do |smps| %>
+				<td><%= smps.text_field :product_name, :value => "SMPS", :readonly => true, class: "4 form-control	product-name" %></td>
+				<td><%= smps.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "14 category-dropdown smps form-control"} %></td>
+				<td><%= smps.number_field :price, :readonly => true, class: "form-control price" %></td>
+				<td><%= smps.number_field :quantity, :readonly => true, :value => 1, class: "form-control qty" %></td>
+				<td><span class="total" id="">0</span></td>
+				<%= smps.hidden_field :customer_id %>
+			<% end %>
+		</tr>
+		<tr>
+			<%= f.fields_for :connectors do |connector| %>
+				<td><%= connector.text_field :product_name, :value => "CONNECTOR", :readonly => true, class: "5 form-control product-name" %></td>
+				<td><%= connector.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "15 category-dropdown connector form-control"} %></td>
+				<td><%= connector.number_field :price, :readonly => true, class: "form-control price" %></td>
+				<td><%= connector.number_field :quantity, :readonly => true, :value => 1, class: "form-control connector-qty" %></td>
+				<td><span class="total" id="">0</span></td>
+				<%= connector.hidden_field :customer_id %>
+			<% end %>
+		</tr>
+		<tr>
+			<%= f.fields_for :hdds do |hdd| %>
+				<td><%= hdd.text_field :product_name, :value => "HDD", :readonly => true, class: "6 form-control product-name" %></td>
+				<td><%= hdd.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "16 category-dropdown form-control"} %></td>
+				<td><%= hdd.number_field :price, :readonly => true, class: "form-control price" %></td>
+				<td><%= hdd.number_field :quantity, :readonly => true, :value => 1, class: "form-control qty" %></td>
+				<td><span class="total" id="">0</span></td>
+				<%= hdd.hidden_field :customer_id %>
+			<% end %>
+		</tr>
+		<tr>
+			<%= f.fields_for :wires do |wire| %>
+				<td><%= wire.text_field :product_name, :value => "WIRE", :readonly => true, class: "7 form-control product-name" %></td>
+				<td><%= wire.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "17 category-dropdown form-control"} %></td>
+				<td><%= wire.number_field :price, :readonly => true, class: "form-control price" %></td>
+				<td><%= wire.number_field :quantity, :readonly => true, :value => 1, class: "form-control qty" %></td>
+				<td><span class="total" id="">0</span></td>
+				<%= wire.hidden_field :customer_id %>
+			<% end %>
+		</tr>
+		<tr>
+			<%= f.fields_for :installations do |installation| %>
+				<td><%= installation.text_field :product_name, :value => "INSTALLATION", :readonly => true, class: "8 form-control product-name" %></td>
+				<td><%= installation.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "18 category-dropdown form-control"} %></td>
+				<td><%= installation.number_field :price, :readonly => true, class: "form-control price" %></td>
+				<td><%= installation.number_field :quantity, :readonly => true, :value => 1, class: "form-control qty" %></td>
+				<td><span class="total" id="">0</span></td>
+				<%= installation.hidden_field :customer_id %>
+			<% end %>
+		</tr>
+		<tr>
+	        <td colspan="3"></td>
+	        <td style="text-align: right;">GRAND TOTAL:</td>
+	        <td><span class="grandTotal"></span></td>
+      </tr>
+	</tbody>
+</table>

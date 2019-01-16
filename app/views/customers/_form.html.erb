@@ -1,0 +1,39 @@
+<style>
+	
+</style>
+<script>
+	
+</script>
+<%= form_for @customer, remote: true do |f| %>
+	
+	<%= render 'shared/error_messages' %>
+
+   	<div class="breadcrumb" style="background-color: #000000;">
+    	<div class="card-header">
+      		<h2 style="color: white;">CAMERA</h2>
+    	</div>
+    	<table class="breadcrumb-item table">
+      		<tbody>
+        		<tr>
+          			<td><strong>DOME CAMERA:</strong><input type="number_field" class="form-control initialQty" id="dome" placeholder="  QUANTITY..." ></td>
+          			<td><strong>BULLET CAMERA:</strong><input type="number_field" class="form-control initialQty" id="bullet" placeholder="  QUANTITY..." ></td>
+          			<td><strong>TOTAL CAMERA:  </strong><br><span id="totalqty" style="font-size: 24px;">0</span></td>
+        		</tr>
+      		</tbody>
+    	</table>
+  	</div> 
+  	
+	
+	<%= render 'item', f: f %>
+	<a class="btn btn-primary proceed" data-toggle="modal" data-target="#customer-model" style="color: white;" id="customerModel" ><i class="fa fa-hand-o-up"></i> PROCEED</a>
+	<div class="modal fade" id="customer-model" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="background-color: rgba(93, 103, 106, 0.31)">
+	    <div class="modal-dialog modal-lg" id= "customermm">
+	      	<div class="modal-content" style="width: 650px;margin: 238px 0 0 6% !important; background-color: #1d1d1e">
+	        	<div class="container-fluid invoice_wrapper" style="margin:5px">
+	          		<%= render 'customer', f: f %> 
+	        	</div>
+	      	</div>
+	    </div>
+	</div>
+	
+<% end %>
