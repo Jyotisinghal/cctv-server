@@ -5,6 +5,25 @@ function productValues(){
     category = $('.'+categoryId).val();
     productName = categoryId;
     selectProducts = cctvs[category + ":" + productName];
+
+    // selectProducts = selectProducts.sort(price);
+    // alert(selectProducts);
+    // for (var i = 0; i < selectProducts.length; i++) {
+    //   for (var j = i+1; j < selectProducts.length; i++) {
+        
+    //     var priceOfI = selectProducts[i].price;
+    //     var priceOfJ = selectProducts[j].price;
+        
+    //     if (priceOfI > priceOfJ) {
+    //       var temp = selectProducts[i].price;
+    //       selectProducts[i].price = selectProducts[j].price;
+    //       selectProducts[j].price = temp;
+    //     }
+    //     console.log(selectProducts[i]);
+    //   }
+    // }
+
+
     categoryDropdown = $('.1'+categoryId);
     categoryDropdown.empty();
     categoryDropdown.append($("<option></option>")
