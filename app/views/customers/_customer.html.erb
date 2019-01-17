@@ -1,5 +1,7 @@
-  <%= image_tag('giphy.gif', style: "display: none", id: "spinner") %>
- 
+  <div id= "spinner">
+    <%= image_tag('giphy.gif') %>  
+  </div>
+   
   <div class="form-group col-md-6">
     <label>NAME</label>
     <%= f.text_field :name, label: false, onkeyup: "forUpperCase()", class: "name form-control customer-details", :placeholder => "Name", id: "customer-name" %>
