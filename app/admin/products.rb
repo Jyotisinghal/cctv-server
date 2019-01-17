@@ -6,7 +6,8 @@ ActiveAdmin.register Product do
 menu :priority => 2, :label => 'PRODUCTS'
 permit_params :name
 # or
-#
+config.filters = false
+
 # permit_params do
 #   permitted = [:permitted, :attributes]
 #   permitted << :other if params[:action] == 'create' && current_user.admin?

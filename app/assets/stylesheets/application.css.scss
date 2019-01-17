@@ -1,4 +1,5 @@
 @import "cctvhome";
+@import "font-awesome";
 
 
 .product-name{
@@ -16,4 +17,56 @@
 
 .customer-details{
 	color: black;
+}
+
+ p, h2{
+    color: white;
+}
+
+ .alertInfo{
+ 	color: white;
+}
+
+.request{
+	margin-left: 40%;
+}
+
+.breadcrumb{
+	background-color: #000000;
+}
+
+#totalqty{
+	font-size: 24px;
+}
+
+.proceed{
+	color: white;
+}
+
+#customer-model{
+	background-color: rgba(93, 103, 106, 0.31);
+}
+
+.modal-content{
+	background-color: #1d1d1e;
+}
+
+
+#customermm{
+	margin-top: 200px;
+}
+
+.invoice_wrapper{
+	margin:5px;
+}
+
+ #spinner{
+        position: fixed;
+        top: 50%;
+        left: 38%;
+        z-index: 100;
+}
+
+.total{
+		text-align: right;
 }

@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "CCTV_SERVER"
+  config.site_title = "CCTV-SERVER"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -269,6 +269,10 @@ ActiveAdmin.setup do |config|
   # You can enable or disable them for all resources here.
   #
   # config.filters = true
+
+ 
+
+
   #
   # By default the filters include associations in a select, which means
   # that every record will be loaded for each association.

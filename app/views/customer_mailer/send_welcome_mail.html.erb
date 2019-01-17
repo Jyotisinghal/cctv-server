@@ -1,32 +1,40 @@
-<h4>Your request is successfully confirmed!</h4>
+<style>
+table,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+</style>
+
+<h4>YOUR REQUEST IS SUCCESSFULLY CONFIRMED...!</h4>
 <p>
-  <strong>Name:</strong>
+  <strong>NAME:</strong>
   <%= @customer.name %>
 </p>
 
 <p>
-  <strong>Contact:</strong>
+  <strong>CONTACT:</strong>
   <%= @customer.contact %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong>EMAIL:</strong>
   <%= @customer.email %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>ADDRESS:</strong>
   <%= @customer.address %>
 </p>
 
-<table class="table conf-table" style="border: 1px solid black; border-collapse:collapse;">
+<table class="table conf-table">
   <thead>
   <tr>
-    <th style="border: 1px solid black; border-collapse:collapse;">ITEMS NAME</th>
-    <th style="border: 1px solid black; border-collapse:collapse;">CATEGORY</th>
-    <th style="border: 1px solid black; border-collapse:collapse;">PRICE</th>
-    <th style="border: 1px solid black; border-collapse:collapse;">QUANTITY</th>
-    <th style="border: 1px solid black; border-collapse:collapse;">TOTAL</th>
+    <th>ITEMS NAME</th>
+    <th>CATEGORY</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+    <th>TOTAL</th>
   </tr>
   </thead>
 
@@ -36,20 +44,20 @@
   <% @items.each do |item| %>
    
     <tr>  
-      <td style="border: 1px solid black; border-collapse:collapse;"><%= item.product_name %></td>
-      <td style="border: 1px solid black; border-collapse:collapse;"><%= item.cctv.category %></td>
-      <td style="border: 1px solid black; border-collapse:collapse; text-align:right;"><%= item.price %></td>
-      <td style="border: 1px solid black; border-collapse:collapse; text-align:center;"><%= item.quantity %></td>
+      <td><%= item.product_name %></td>
+      <td><%= item.cctv.category %></td>
+      <td style="text-align:right;"><%= item.price %></td>
+      <td style="text-align:center;"><%= item.quantity %></td>
       <% total = item.price.to_i * item.quantity.to_i %>
-      <td style="border: 1px solid black; border-collapse:collapse; text-align:right;"><%= total %></td>
+      <td style="text-align:right;"><%= total %>.00</td>
     </tr>
     <% grandTotal += total %>
     <% end %>
    
    <tr>
    <td colspan="3"></td>
-   <td style="border: 1px solid black; border-collapse:collapse;">GRAND TOTAL: </td>
-   <td style="border: 1px solid black; border-collapse:collapse; text-align:right;"><%= grandTotal %></td>
+   <td>GRAND TOTAL: </td>
+   <td style="text-align:right;"><%= grandTotal %>.00</td>
    </tr>
   
   </tbody>

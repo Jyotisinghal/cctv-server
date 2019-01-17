@@ -1,29 +1,26 @@
-<style>
+  <%= image_tag('giphy.gif', style: "display: none", id: "spinner") %>
  
-</style>
   <div class="form-group col-md-6">
     <label>NAME</label>
     <%= f.text_field :name, label: false, onkeyup: "forUpperCase()", class: "name form-control customer-details", :placeholder => "Name", id: "customer-name" %>
-    
   </div>
-  <div class="form-group col-md-6">
-    <label>CONTACT </label>
-    <%= f.number_field :contact, title: "Please Enter Valid Number", label: false, class: "contact form-control customer-details", id: "cont", :placeholder => "Enter valid 10 digit Contact number" %>
 
-    
+
+  <div class="form-group col-md-6">
+    <label>CONTACT</label><small class="alertInfo pull-right"></small>
+    <%= f.number_field :contact, title: "Please Enter Valid Number", label: false, class: "contact form-control customer-details", id: "cont", :placeholder => "Enter valid 10 digit Contact number" %>
   </div>
 
   <div class="form-group">
     <label>EMAIL</label>
     <%= f.email_field :email, title: "Please Enter Valid Email Address", label: false, class: "email form-control customer-details", :placeholder => "Enter Valid Email Address" %>
-    
   </div>
+
   <div class="form-group">
     <label>ADDRESS</label>
     <%= f.text_field :address, label: false, class: "address form-control customer-details", :placeholder => "address" %>
-    
   </div>
 
 
-  <%= f.submit "REQUEST", class: "btn btn-default request", onclick: "validate()", style: "margin-left: 40%;" %>
+  <%= f.submit "REQUEST", class: "btn btn-default request", onclick: "validate()" %>
  

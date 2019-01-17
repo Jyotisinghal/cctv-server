@@ -86,10 +86,12 @@ jQuery(function() {
 
       if (selectedCategory == "CONNECTOR") {
         var multiPriceQty = price * totalqty;
+        multiPriceQty = multiPriceQty.toFixed(2);
         productTotal.html(multiPriceQty);
       } 
       else {
         var multiPriceQty = price * productQty;
+        multiPriceQty = multiPriceQty.toFixed(2);
         productTotal.html(multiPriceQty);
       }
     }
@@ -118,6 +120,8 @@ jQuery(function() {
     //for total
     var qty = $(this).parent('td').next('td').next('td').children('.qty').val();
     var totalPriceQty = price * qty;
+    totalPriceQty = totalPriceQty.toFixed(2);
+
     $(this).parent('td').next('td').next('td').next('td').children('.total').html(totalPriceQty);
       
     grandTotal();
@@ -187,6 +191,9 @@ function validate() {
     $('.contact').val(null);
     document.getElementById('cont').style.backgroundColor = "red";
   } 
+  else{
+    $('#spinner').show();
+  }
 }
 
 jQuery(function() {
@@ -194,9 +201,14 @@ jQuery(function() {
   // for price
   return $(document).on("keyup",".contact", function(){
     var contactNumber = $('.contact').val();
-    if (contactNumber.length == 10) {
+    if (contactNumber.length <= 10) {
       document.getElementById('cont').style.backgroundColor = "white";
+      $('.alertInfo').empty();
      
+    }
+    else if(contactNumber > 10){
+      document.getElementById('cont').style.backgroundColor = "red";
+      $('.alertInfo').html("Contact No. OutOfRange");
     }
   });
 });

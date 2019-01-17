@@ -5,7 +5,11 @@ ActiveAdmin.register Customer do
 # permit_params :list, :of, :attributes, :on, :model
 menu :priority => 4, :label => 'CUSTOMERS'
 # or
-#
+
+ 	 config.filters = false
+	
+
+
 # permit_params do
 #   permitted = [:permitted, :attributes]
 #   permitted << :other if params[:action] == 'create' && current_user.admin?

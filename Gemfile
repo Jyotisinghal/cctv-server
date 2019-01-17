@@ -70,3 +70,4 @@ gem 'devise'
 gem 'activeadmin'
 gem 'simple_form'
 gem 'client_side_validations'
+gem "font-awesome-rails"
