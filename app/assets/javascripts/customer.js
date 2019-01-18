@@ -1,30 +1,11 @@
 // for dropdown
 function productValues(){
-  for (var i = 0; i < 8; i++ ) {
-    var categoryId = i+1;
-    category = $('.'+categoryId).val();
-    productName = categoryId;
-    selectProducts = cctvs[category + ":" + productName];
+  for (var i = 1; i <= 8; i++ ) {
+  category = $('.'+i).val();
+  selectProducts = cctvs[category + ":" + i];
 
-    // selectProducts = selectProducts.sort(price);
-    // alert(selectProducts);
-    // for (var i = 0; i < selectProducts.length; i++) {
-    //   for (var j = i+1; j < selectProducts.length; i++) {
-        
-    //     var priceOfI = selectProducts[i].price;
-    //     var priceOfJ = selectProducts[j].price;
-        
-    //     if (priceOfI > priceOfJ) {
-    //       var temp = selectProducts[i].price;
-    //       selectProducts[i].price = selectProducts[j].price;
-    //       selectProducts[j].price = temp;
-    //     }
-    //     console.log(selectProducts[i]);
-    //   }
-    // }
-
-
-    categoryDropdown = $('.1'+categoryId);
+   
+    categoryDropdown = $('.1'+i);
     categoryDropdown.empty();
     categoryDropdown.append($("<option></option>")
       .attr("value","")
@@ -46,13 +27,22 @@ jQuery(function() {
   // for addition of Quantity of Cameras
   return $(document).on("keyup",".initialQty", function(){
     var dome = Number(document.getElementById('dome').value);
-    $('#dome-qty').val(dome);
+    
     var bullet = Number(document.getElementById('bullet').value);
-    $('#bullet-qty').val(bullet);
+    
     var totalqty = (dome + bullet);
-    document.getElementById('totalqty').innerHTML = totalqty;
-    $('.connector-qty').val(totalqty);
 
+    if (totalqty <= 32 && dome <= 32 && bullet <= 32 ) {
+      $('#dome-qty').val(dome);
+      $('#bullet-qty').val(bullet);
+      document.getElementById('totalqty').innerHTML = totalqty;
+      $('.connector-qty').val(totalqty);
+    } 
+    else {
+      $('#totalqty').html("Quantity should be less than 32");
+     
+    }
+    
   //for dome
     var priceDome = $('.dome-camera-price').val();
     var total = dome * priceDome;
@@ -80,7 +70,7 @@ jQuery(function() {
         k = 0;
         for (var j = 0; j < selectProducts.length; j++) {
         
-          if ((totalqty <= selectProducts[j].category && totalqty != 0) || selectProducts[j].category == "CONNECTOR SET") {
+          if ((totalqty <= selectProducts[j].category || selectProducts[j].category == "CONNECTOR SET") && (totalqty != 0 && totalqty <= 32)) {
             var category = selectProducts[j].category;
             var id = selectProducts[j].id
 
@@ -100,20 +90,26 @@ jQuery(function() {
               k++;
             }
           }
+          else if((totalqty == 0 || totalqty > 32) && k == 0){
+            categoryDropdown.append($("<option></option>")
+              .attr("value","")
+              .text("Select Quantity above"));
+            k++
+          }
         } 
       productPrice.val(price);
-
-      if (selectedCategory == "CONNECTOR") {
-        var multiPriceQty = price * totalqty;
-        multiPriceQty = multiPriceQty.toFixed(2);
-        productTotal.html(multiPriceQty);
-      } 
-      else {
-        var multiPriceQty = price * productQty;
-        multiPriceQty = multiPriceQty.toFixed(2);
-        productTotal.html(multiPriceQty);
+      if (totalqty == 0 || totalqty > 32) {
+        productTotal.html(0);
       }
-    }
+      else{
+        
+        var multiTotal = price * totalqty;
+        multiTotal = multiTotal.toFixed(2);
+        productTotal.html(multiTotal);
+      
+      }
+      
+   }
     grandTotal()
   });
   
@@ -138,7 +134,7 @@ jQuery(function() {
 
     //for total
     var qty = $(this).parent('td').next('td').next('td').children('.qty').val();
-    var totalPriceQty = price * qty;
+    var totalPriceQty = price * Number(qty);
     totalPriceQty = totalPriceQty.toFixed(2);
 
     $(this).parent('td').next('td').next('td').next('td').children('.total').html(totalPriceQty);

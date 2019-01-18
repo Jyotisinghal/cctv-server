@@ -6,7 +6,7 @@ ActiveAdmin.register Customer do
 menu :priority => 4, :label => 'CUSTOMERS'
 # or
 
- 	 config.filters = false
+ config.filters = false
 	
 
 

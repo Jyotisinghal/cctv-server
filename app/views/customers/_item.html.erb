@@ -58,7 +58,7 @@
 				<td><%= connector.text_field :product_name, :value => "CONNECTOR", :readonly => true, class: "5 form-control product-name" %></td>
 				<td><%= connector.collection_select :cctv_id, Cctv.all, :id, :category, { include_blank: "select category"}, {class: "15 category-dropdown connector form-control"} %></td>
 				<td><%= connector.number_field :price, :readonly => true, class: "form-control price" %></td>
-				<td><%= connector.number_field :quantity, :readonly => true, :value => 1, class: "form-control connector-qty" %></td>
+				<td><%= connector.number_field :quantity, :readonly => true, :value => 1, class: "form-control connector-qty qty" %></td>
 				<td><i class="fa fa-inr"></i><span class="total pull-right">0</span></td>
 				<%= connector.hidden_field :customer_id %>
 			<% end %>

@@ -19,12 +19,8 @@ index do
     actions
   end
 
-  filter :customer, collection: -> {
-    Customer.all.map { |dev| [dev.name] }
-  }
-  # filter :cctv, collection: -> {
-  #   Cctv.all.map { |dev| [dev.category] }
-  # }
+ filter :customer
+  
   
 
 # permit_params do
