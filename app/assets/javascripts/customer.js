@@ -39,7 +39,7 @@ jQuery(function() {
       $('.connector-qty').val(totalqty);
     } 
     else {
-      $('#totalqty').html("Quantity should be less than 32");
+      $('#totalqty').html("Quantity should be lessthan 32");
      
     }
     
