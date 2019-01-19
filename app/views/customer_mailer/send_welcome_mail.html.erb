@@ -1,12 +1,3 @@
-<style>
-table,th,td{
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-</style>
-
-<h4>YOUR REQUEST IS SUCCESSFULLY CONFIRMED...!</h4>
 <p>
   <strong>NAME:</strong>
   <%= @customer.name %>
@@ -27,14 +18,14 @@ table,th,td{
   <%= @customer.address %>
 </p>
 
-<table class="table conf-table">
+<table class="table conf-table" style="border:1px solid black;border-collapse:collapse">
   <thead>
   <tr>
-    <th>ITEMS NAME</th>
-    <th>CATEGORY</th>
-    <th>PRICE</th>
-    <th>QUANTITY</th>
-    <th>TOTAL</th>
+    <th style="border:1px solid black;border-collapse:collapse">ITEMS NAME</th>
+    <th style="border:1px solid black;border-collapse:collapse">CATEGORY</th>
+    <th style="border:1px solid black;border-collapse:collapse">PRICE</th>
+    <th style="border:1px solid black;border-collapse:collapse">QUANTITY</th>
+    <th style="border:1px solid black;border-collapse:collapse">TOTAL</th>
   </tr>
   </thead>
 
@@ -44,12 +35,12 @@ table,th,td{
   <% @items.each do |item| %>
    
     <tr>  
-      <td><%= item.product_name %></td>
-      <td><%= item.cctv.category %></td>
-      <td style="text-align:right;"><%= item.price %></td>
-      <td style="text-align:center;"><%= item.quantity %></td>
+      <td style="border:1px solid black;border-collapse:collapse"><%= item.product_name %></td>
+      <td style="border:1px solid black;border-collapse:collapse"><%= item.cctv.category %></td>
+      <td style="border:1px solid black;border-collapse:collapse;text-align:right;"><%= item.price %></td>
+      <td style="border:1px solid black;border-collapse:collapse;text-align:center;"><%= item.quantity %></td>
       <% total = item.price.to_i * item.quantity.to_i %>
-      <td style="text-align:right;"><%= total %>.00</td>
+      <td style="border:1px solid black;border-collapse:collapse;text-align:right;"><%= total %>.00</td>
     </tr>
     <% grandTotal += total %>
     <% end %>
@@ -57,7 +48,7 @@ table,th,td{
    <tr>
    <td colspan="3"></td>
    <td>GRAND TOTAL: </td>
-   <td style="text-align:right;"><%= grandTotal %>.00</td>
+   <td style="border:1px solid black;border-collapse:collapse;text-align:right;"><%= grandTotal %>.00</td>
    </tr>
   
   </tbody>
