@@ -1,4 +1,7 @@
 class CctvController < ApplicationController
   def home
   end
+
+  def contact
+  end
 end

@@ -1,21 +1,23 @@
 <%= form_for @customer, remote: true do |f| %>
 	
-   	<div class="breadcrumb">
-    	<div class="card-header">
-      		<div class="logo">
-			<center><%= image_tag("logo.png") %></a></center>
+   	
+    	
+  		<div class="logo">
+			<center><%= link_to image_tag("logo.png"), root_path %></a></center>
 		</div>
+    	<div class="table-responsive" style="margin-bottom: 2%;">
+    		<table class="table-for-mobile">
+      			<tbody>
+        			<tr>
+          				<td><strong>DOME CAMERA:</strong><input type="number" class="form-control initialQty" id="dome" placeholder="  QUANTITY..." ></td>
+          				<td><strong>BULLET CAMERA:</strong><input type="number" class="form-control initialQty" id="bullet" placeholder="  QUANTITY..." ></td>
+          				<td><strong>TOTAL CAMERA:  </strong><br><span id="totalqty">0</span></	td>
+        			</tr>
+      			</tbody>
+    		</table>
     	</div>
-    	<table class="breadcrumb-item table-responsive">
-      		<tbody>
-        		<tr>
-          			<td><strong>DOME CAMERA:</strong><input type="number" class="form-control initialQty" id="dome" placeholder="  QUANTITY..." ></td>
-          			<td><strong>BULLET CAMERA:</strong><input type="number" class="form-control initialQty" id="bullet" placeholder="  QUANTITY..." ></td>
-          			<td><strong>TOTAL CAMERA:  </strong><br><span id="totalqty">0</span></td>
-        		</tr>
-      		</tbody>
-    	</table>
-  	</div> 
+    	
+ 
   	
 	
 	<%= render 'item', f: f %></br>
