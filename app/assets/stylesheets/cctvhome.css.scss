@@ -63,22 +63,17 @@ h5 { font-size: 20px; }
 h6 { font-size: 16px; }
 
 table{
-	width:100%;
-	max-width:100%;
-	text-align:left;
+	width:70%;
+	
 	border-collapse: collapse;
 	border-spacing: 0px;
-	margin-bottom:15px;
+	margin: 0px auto;
 	color:#fff;
 	
 }
-table tr{
-	
-}
+
 table th{
 	vertical-align:top;
-	color:#fff;
-	background:none;
 	font-size: 16vw;
 	font-weight:normal;
 	padding:15px 10px;
@@ -86,8 +81,21 @@ table th{
 }
 table td{
 	vertical-align:top;
-	padding:10px;
 	
+	
+}
+
+.product-name{
+	width:148px;
+	
+}
+
+.price{
+	width:100px;
+}
+
+.qty{
+	width:50px;
 }
 
 code, pre {
@@ -3420,9 +3428,9 @@ img.svg{
 .porta_tm_news_wrap ul li .definition{margin-bottom: 33px;}
 .porta_tm_news_wrap ul li .definition p{color: #eee;}
 .porta_tm_news_wrap ul li .read_more a{
-	color: #000;
+	color: white;
     text-decoration: none;
-        background-color: #ffffff7a;
+        background-color: black;
     padding: 8px 35px;
     display: inline-block;
     font-family: "Quicksand";
@@ -3436,8 +3444,8 @@ img.svg{
     transition: all .3s ease;
 }
 .porta_tm_news_wrap ul li .read_more a:hover{
-	color: #fff;
-	background-color: #585353;
+	color: #white;
+	background-color: #black;
 }
 .porta_tm_news_pagination{
 	width: 100%;

@@ -1,28 +1,30 @@
 <!-- <p id="notice"><%= notice %></p> -->
-
+<div >
+  <table style="border:none !important">
 </br>
-<p>
-  <strong>NAME :</strong>
-  <%= @customer.name %>
-</p>
+<tr>
+  <td><strong>NAME :</strong></td>
+ <td><%= @customer.name %></td>
+</tr>
 
-<p>
-  <strong>CONTACT :</strong>
-  <%= @customer.contact %>
-</p>
+<tr>
+  <td><strong>CONTACT :</strong></td>
+  <td><%= @customer.contact %></td>
+</tr>
 
-<p>
-  <strong>EMAIL :</strong>
-  <%= @customer.email %>
-</p>
+<tr>
+  <td><strong>EMAIL :</strong></td>
+  <td><%= @customer.email %></td>
+</tr>
 
-<p>
-  <strong>ADDRESS :</strong>
-  <%= @customer.address %>
-</p>
+<tr>
+  <td><strong>ADDRESS :</strong></td>
+  <td><%= @customer.address %></td>
+</tr>
+</table>
+</div>
 </br>
-
-<table class="table">
+<table>
   <thead>
   <tr>
     <th>ITEMS NAME</th>
@@ -40,11 +42,11 @@
    
     <tr>  
       <td><%= item.product_name %></td>
-      <td><%= item.cctv.category %></td>
-      <td style="text-align: right;"><i class="fa fa-inr">&nbsp</i><%= item.price %></td>
-      <td style="text-align: right;"><%= item.quantity %></td>
+      <td ><%= item.cctv.category %></td>
+      <td style="width:150px;text-align: right;"><i class="fa fa-inr">&nbsp</i><%= item.price %></td>
+      <td style="width:80px;text-align: center;"><%= item.quantity %></td>
       <% total = item.price.to_i * item.quantity.to_i %>
-      <td style="text-align: right;"><i class="fa fa-inr">&nbsp</i><%= total %>.00</td>
+      <td style="width:220px;text-align: right;"><i class="fa fa-inr">&nbsp</i><%= total %>.00</td>
     </tr>
     <% grandTotal += total %>
     <% end %>

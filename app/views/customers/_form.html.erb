@@ -2,9 +2,11 @@
 	
    	<div class="breadcrumb">
     	<div class="card-header">
-      		<h2 ><%= link_to "CAMERA", root_path %></h2>
+      		<div class="logo">
+			<center><%= image_tag("logo.png") %></a></center>
+		</div>
     	</div>
-    	<table class="breadcrumb-item table">
+    	<table class="breadcrumb-item ">
       		<tbody>
         		<tr>
           			<td><strong>DOME CAMERA:</strong><input type="number" class="form-control initialQty" id="dome" placeholder="  QUANTITY..." ></td>
@@ -16,8 +18,8 @@
   	</div> 
   	
 	
-	<%= render 'item', f: f %>
-	<a class="btn btn-primary proceed" data-toggle="modal" data-target="#customer-model" id="customerModel" ><i class="fa fa-hand-o-up"></i> PROCEED</a>
+	<%= render 'item', f: f %></br>
+	<center><a class="btn btn-primary proceed" data-toggle="modal" data-target="#customer-model" id="customerModel" ><i class="fa fa-hand-o-up"></i> PROCEED</a></center>
 
 	<div class="modal fade" id="customer-model" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 	    

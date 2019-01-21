@@ -2,9 +2,6 @@
 @import "font-awesome";
 
 
-.product-name{
-	background-color: black !important;
-}
 .form-control, 
 .form-control[readonly] {
   background-color : black;
@@ -19,7 +16,7 @@
 	color: black;
 }
 
- p, h2{
+ p, h2,h6{
     color: white;
 }
 
@@ -37,6 +34,11 @@
 
 #totalqty{
 	font-size: 24px;
+	width:150px;
+}
+
+#bullet,#dome{
+	width:150px;
 }
 
 .proceed{
