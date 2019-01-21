@@ -63,7 +63,7 @@ h5 { font-size: 20px; }
 h6 { font-size: 16px; }
 
 table{
-	width:65%;
+	width:800px;
 	
 	border-collapse: collapse;
 	border-spacing: 0px;
@@ -3430,7 +3430,7 @@ img.svg{
 .porta_tm_news_wrap ul li .read_more a{
 	color: white;
     text-decoration: none;
-        background-color: black;
+    background-color: black;
     padding: 8px 35px;
     display: inline-block;
     font-family: "Quicksand";
@@ -3444,8 +3444,8 @@ img.svg{
     transition: all .3s ease;
 }
 .porta_tm_news_wrap ul li .read_more a:hover{
-	color: #white;
-	background-color: #black;
+	color: white;
+	background-color: black;
 }
 .porta_tm_news_pagination{
 	width: 100%;
