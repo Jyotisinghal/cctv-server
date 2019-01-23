@@ -202,13 +202,19 @@ jQuery(function() {
 // for validation
 function validate() {
   var contactNumber = $('#customer-contact').val();
-
+  var customerEmail = $('#customer-email').val();
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (contactNumber == "" || isNaN(parseInt(contactNumber)) || !(contactNumber.length == 10)) {
     $('#customer-contact').val(null);
     document.getElementById('customer-contact').style.backgroundColor = "red";
-  } 
-  else{
-    $('#spinner').show();
+    } 
+
+    else{
+      if(customerEmail.match(mailformat))
+      {
+        $('#spinner').show();
+      }
+    
   }
 }
 
@@ -228,4 +234,5 @@ jQuery(function() {
     }
   });
 });
+
 
