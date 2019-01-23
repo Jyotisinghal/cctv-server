@@ -1,27 +1,23 @@
 <%= form_for @customer, remote: true do |f| %>
 	
-   	
-    	
-  		<div class="logo">
-			<center><%= link_to image_tag("logo.png"), root_path %></a></center>
+  <div class="logo">
+		<center><%= link_to image_tag("logo.png"), root_path %></a></center>
+	</div>
+   	<div class="table-responsive" style="margin-bottom: 2%;">
+   		<table class="table-for-mobile">
+  			<tr>
+    				<td><strong>DOME CAMERA:</strong><input type="number" class="form-control initialQty" id="dome" placeholder="  QUANTITY..." ></td>
+    				<td><strong>BULLET CAMERA:</strong><input type="number" class="form-control initialQty" id="bullet" placeholder="  QUANTITY..." ></td>
+    				<td style="width: 47%;"><strong>TOTAL CAMERA:  </strong><br><span id="totalqty">0</span></td>
+  			</tr>
+			</table>
 		</div>
-    	<div class="table-responsive" style="margin-bottom: 2%;">
-    		<table class="table-for-mobile">
-        			<tr>
-          				<td style="width: 33%"><strong>DOME CAMERA:</strong><input type="number" class="form-control initialQty" id="dome" placeholder="  QUANTITY..." ></td>
-          				<td style="width: 33%"><strong>BULLET CAMERA:</strong><input type="number" class="form-control initialQty" id="bullet" placeholder="  QUANTITY..." ></td>
-          				<td style="width: 34%"><strong>TOTAL CAMERA:  </strong><br><span id="totalqty">0</span></	td>
-        			</tr>
-    		</table>
-    	</div>
-    	
- 
-  	
-	
-	<%= render 'item', f: f %></br>
-	<center><a class="btn btn-primary proceed" data-toggle="modal" data-target="#customer-model" id="customerModel" ><i class="fa fa-hand-o-up"></i> PROCEED</a></center>
+		<%= render 'item', f: f %></br>
+		<center>
+			<a class="btn btn-primary proceed" data-toggle="modal" data-target="#customer-model" id="customerModel" ><i class="fa fa-hand-o-up"></i> PROCEED</a>
+		</center>
 
-	<div class="modal fade" id="customer-model" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal fade" id="customer-model" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 	    
 	    <div class="modal-dialog modal-md" id= "customermm">
 	      	

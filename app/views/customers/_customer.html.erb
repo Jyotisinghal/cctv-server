@@ -2,25 +2,25 @@
     <%= image_tag('giphy.gif') %>  
   </div>
    
-  <div class="form-group col-md-6">
+  <div class="form-group col-md-6 name">
     <label>NAME</label>
-    <%= f.text_field :name, label: false, onkeyup: "forUpperCase()", class: "name form-control customer-details", :placeholder => "Name", id: "customer-name" %>
+    <%= f.text_field :name, label: false, onkeyup: "forUpperCase()", class: "form-control customer-details", :placeholder => "Name", id: "customer-name" %>
   </div>
 
 
-  <div class="form-group col-md-6">
+  <div class="form-group col-md-6 ">
     <label>CONTACT</label><small class="alertInfo pull-right"></small>
-    <%= f.number_field :contact, title: "Please Enter Valid Number", label: false, class: "contact form-control customer-details", id: "cont", :placeholder => "Enter valid 10 digit Contact number" %>
+    <%= f.number_field :contact, title: "Please Enter Valid Number", label: false, class: "form-control customer-details", id: "customer-contact", :placeholder => "Contact" %>
   </div>
 
   <div class="form-group">
     <label>EMAIL</label>
-    <%= f.email_field :email, title: "Please Enter Valid Email Address", label: false, class: "email form-control customer-details", :placeholder => "Enter Valid Email Address" %>
+    <%= f.email_field :email, title: "Please Enter Valid Email Address", label: false, class: "form-control customer-details", id: "customer-email", :placeholder => "Email" %>
   </div>
 
   <div class="form-group">
     <label>ADDRESS</label>
-    <%= f.text_field :address, label: false, class: "address form-control customer-details", :placeholder => "address" %>
+    <%= f.text_field :address, label: false, class: "form-control customer-details",id: "customer-address", :placeholder => "address" %>
   </div>
 
 

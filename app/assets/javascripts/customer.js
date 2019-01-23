@@ -39,7 +39,8 @@ jQuery(function() {
       $('.connector-qty').val(totalqty);
     } 
     else {
-      $('#totalqty').html("Quantity should be less than 32");
+      
+      $('#totalqty').html("Quantity can be less than 32");
      
     }
     
@@ -184,12 +185,12 @@ function forUpperCase() {
 
 jQuery(function() {
 
-  // for price
+  
   return $(document).on("keyup",".customer-details", function(){
-    var customerName = $('.name').val();
-    var customerContact = $('.contact').val();
-    var customerEmail = $('.email').val();
-    var customerAddress = $('.address').val();
+    var customerName = $('#customer-name').val();
+    var customerContact = $('#customer-contact').val();
+    var customerEmail = $('#customer-email').val();
+    var customerAddress = $('#customer-address').val();
     if (customerName == "" || customerContact == "" || customerEmail == "" || customerAddress == "")  {
       $('.request').hide();
      } else {
@@ -200,11 +201,11 @@ jQuery(function() {
 
 // for validation
 function validate() {
-  var contactNumber = $('.contact').val();
+  var contactNumber = $('#customer-contact').val();
 
   if (contactNumber == "" || isNaN(parseInt(contactNumber)) || !(contactNumber.length == 10)) {
-    $('.contact').val(null);
-    document.getElementById('cont').style.backgroundColor = "red";
+    $('#customer-contact').val(null);
+    document.getElementById('customer-contact').style.backgroundColor = "red";
   } 
   else{
     $('#spinner').show();
@@ -213,17 +214,18 @@ function validate() {
 
 jQuery(function() {
 
-  // for price
-  return $(document).on("keyup",".contact", function(){
-    var contactNumber = $('.contact').val();
+  
+  return $(document).on("keyup","#customer-contact", function(){
+    var contactNumber = $('#customer-contact').val();
     if (contactNumber.length <= 10) {
-      document.getElementById('cont').style.backgroundColor = "white";
+      document.getElementById('customer-contact').style.backgroundColor = "white";
       $('.alertInfo').empty();
      
     }
     else if(contactNumber > 10){
-      document.getElementById('cont').style.backgroundColor = "red";
+      document.getElementById('customer-contact').style.backgroundColor = "red";
       $('.alertInfo').html("Contact No. OutOfRange");
     }
   });
 });
+
