@@ -25,6 +25,11 @@
 	margin-left: 40%;
 }
 
+.item-header{ width: 27%;}
+.category-header{ width: 27%;}
+.price-header{ width: 14%;}
+.qty-header{ width: 9%;}
+
 .breadcrumb{
 	background-color: #000000;
 }
@@ -80,11 +85,13 @@
 	.initialQty { width:100% !important; }
 	.logo img { width: 20% !important; }
 	.logo { margin-bottom: 15px;}
+    .qty-header{width: 20%;}
 	.product-name{ width:148px; }
+    select#dome-category {width: 136px; }
 	table{width: 100% ; input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
     border-radius: 10;
     font-size: 13px;
-    min-width: 85px;
+    min-width: 65px;
     color: #fff;
     letter-spacing: 1.4px;
     -webkit-box-sizing: border-box;
@@ -111,8 +118,10 @@
 
 	#customer-name { width: 108%;margin-left: -10px; }
 	.product-name{ width:148px; }
+     select#dome-category {width: 136px; }
 	#customer-contact{ width: 110%; margin-left: -15px; }
 	.table-for-mobile{ width:100%; }
+    .qty-header{width: 20%;}
 	.initialQty { width:100% !important; }
 	.logo img { width: 20% !important; }
 	.logo { margin-bottom: 15px;}
@@ -122,7 +131,7 @@
 	 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
     border-radius: 10;
     font-size: 13px;
-    min-width: 85px;
+    min-width: 65px;
     color: #fff;
     letter-spacing: 1.4px;
     -webkit-box-sizing: border-box;
@@ -146,9 +155,5 @@
 }
 
 
-.item-header{ width: 27%;}
-.category-header{ width: 27%;}
-.price-header{ width: 14%;}
-.qty-header{ width: 9%;}
-.total-header{ width: auto; }
+
 
