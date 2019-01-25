@@ -1,0 +1,62 @@
+<div class="table-responsive">
+  <table class="table">
+</br>
+<tr>
+  <td><strong>NAME :</strong></td>
+ <td><%= @customer.name %></td>
+</tr>
+
+<tr>
+  <td><strong>CONTACT :</strong></td>
+  <td><%= @customer.contact %></td>
+</tr>
+
+<tr>
+  <td><strong>EMAIL :</strong></td>
+  <td><%= @customer.email %></td>
+</tr>
+
+<tr>
+  <td><strong>ADDRESS :</strong></td>
+  <td><%= @customer.address %></td>
+</tr>
+</table>
+</div>
+</br>
+<div class="table-responsive">
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>ITEMS NAME</th>
+    <th>CATEGORY</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+    <th>TOTAL</th>
+  </tr>
+  </thead>
+
+  <tbody>
+ 
+  <% grandTotal = 0 %>
+  <% @items.each do |item| %>
+   
+    <tr>  
+      <td><%= item.product_name %></td>
+      <td ><%= item.cctv.category %></td>
+      <td style="width:150px;text-align: right;"><i class="fa fa-inr">&nbsp</i><%= item.price %></td>
+      <td style="width:80px;text-align: center;"><%= item.quantity %></td>
+      <% total = item.price.to_i * item.quantity.to_i %>
+      <td style="width:220px;text-align: right;"><i class="fa fa-inr">&nbsp</i><%= total %>.00</td>
+    </tr>
+    <% grandTotal += total %>
+    <% end %>
+   <tr>
+   <td colspan="4"></td>
+   <td style="text-align: right;">GRAND TOTAL: <i class="fa fa-inr">&nbsp</i><%= grandTotal %>.00</td>
+   </tr>
+  
+  </tbody>
+</table>
+  
+</div>

@@ -58,4 +58,31 @@
   
   </tbody>
 </table>
+<a class="btn btn-default btn-sm" id="invoice_button" data-toggle="modal" data-target="#invoice_modal">PREVIEW</a>
 
+<div class="modal fade" id="invoice_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="container-fluid invoice_wrapper" style="margin:10px" id="print-me">
+        <div class="row">
+          <div class="col-md-12 model-print-logo">
+            <center class="image">
+              <%= image_tag('logo_2.png') %>
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" style="font-size: 17px; color: white">
+            <div class="text-center">
+              <strong>Address: F-82-1st Floor, Raiser Plaza, Indira Market, Jaipur. Contact: 9799974142, 9680825595</strong>
+            </div>
+          </div>
+        </div>
+        <%= render 'customerPrint' %>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="printDiv('print-me')">PRINT</button>
+      </div>
+    </div>
+  </div>
+</div>
