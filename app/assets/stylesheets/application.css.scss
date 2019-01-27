@@ -160,5 +160,20 @@
 }
 
 
-
+a#invoice_button {
+    border: 1px solid #716f6f;
+    color: white;
+}
+div#invoice_modal {
+    padding-left: 0;
+}
+table th {
+    vertical-align: top;
+    font-weight: normal;
+    padding: 0px;
+    color: #fff !important;
+    background: none;
+    border: 1px solid #3e3c3c !important;
+    text-align: center;
+}
 
