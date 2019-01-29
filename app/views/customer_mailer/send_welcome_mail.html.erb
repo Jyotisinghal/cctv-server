@@ -1,6 +1,9 @@
+<h4>Dear <%= @customer.name %></h4>
+<h4>Your request is successfully confirmed!</h4>
+
 <p>
-  <strong>NAME:</strong>
-  <%= @customer.name %>
+  <strong>DATE:</strong>
+  <%= @customer.created_at.strftime("%d-%m-%Y") %>
 </p>
 
 <p>
@@ -53,5 +56,9 @@
   
   </tbody>
 </table>
+
+<h3>Regards</h3>
+<h4>Smart Techno</h4>
+<a href="https://smarttechno.in/">www.smarttechno.in</a>
 
 
