@@ -58,59 +58,59 @@ jQuery(function() {
     totalLocation.html(total);
 
 
-    for (var i = 3; i <= 5; i++) {
-      selectedCategory = $('.'+i).val();
-      selectProducts = cctvs[selectedCategory + ":" + i];
-      categoryDropdown = $('.1'+i);
-      categoryDropdown.empty();
-      productPrice = categoryDropdown.parent('td').next('td').children('.price');
-      productPrice.empty();
-      productQty = categoryDropdown.parent('td').next('td').next('td').children('.qty').val();
-      productTotal = categoryDropdown.parent('td').next('td').next('td').next('td').children('.total');
+   //  for (var i = 3; i <= 5; i++) {
+   //    selectedCategory = $('.'+i).val();
+   //    selectProducts = cctvs[selectedCategory + ":" + i];
+   //    // categoryDropdown = $('.1'+i);
+   //    categoryDropdown.empty();
+   //    productPrice = categoryDropdown.parent('td').next('td').children('.price');
+   //    productPrice.empty();
+   //    productQty = categoryDropdown.parent('td').next('td').next('td').children('.qty').val();
+   //    productTotal = categoryDropdown.parent('td').next('td').next('td').next('td').children('.total');
       
-        k = 0;
-        for (var j = 0; j < selectProducts.length; j++) {
+   //      k = 0;
+   //      for (var j = 0; j < selectProducts.length; j++) {
         
-          if ((totalqty <= selectProducts[j].category || selectProducts[j].category == "CONNECTOR SET") && (totalqty != 0 && totalqty <= 32)) {
-            var category = selectProducts[j].category;
-            var id = selectProducts[j].id
+   //        if ((totalqty <= selectProducts[j].category || selectProducts[j].category == "CONNECTOR SET") && (totalqty != 0 && totalqty <= 32)) {
+   //          var category = selectProducts[j].category;
+   //          var id = selectProducts[j].id
 
-            if (selectProducts[j].category == "CONNECTOR SET"){
-              categoryDropdown.append($("<option></option>")
-                .attr("value",id)
-                .text(category)); 
-            }
-            else{
-              categoryDropdown.append($("<option></option>")
-                .attr("value",id)
-                .text(category + " CHANNEL")); 
-            }
+   //          if (selectProducts[j].category == "CONNECTOR SET"){
+   //            categoryDropdown.append($("<option></option>")
+   //              .attr("value",id)
+   //              .text(category)); 
+   //          }
+   //          else{
+   //            categoryDropdown.append($("<option></option>")
+   //              .attr("value",id)
+   //              .text(category + " CHANNEL")); 
+   //          }
 
-            if ((totalqty <= selectProducts[j].category && k == 0) || selectProducts[j].category == "CONNECTOR SET") {
-              var price = selectProducts[j].price;
-              k++;
-            }
-          }
-          else if((totalqty == 0 || totalqty > 32) && k == 0){
-            categoryDropdown.append($("<option></option>")
-              .attr("value","")
-              .text("Select Quantity above"));
-            k++
-          }
-        } 
-      productPrice.val(price);
-      if (totalqty == 0 || totalqty > 32) {
-        productTotal.html(0);
-      }
-      else{
+   //          if ((totalqty <= selectProducts[j].category && k == 0) || selectProducts[j].category == "CONNECTOR SET") {
+   //            var price = selectProducts[j].price;
+   //            k++;
+   //          }
+   //        }
+   //        else if((totalqty == 0 || totalqty > 32) && k == 0){
+   //          categoryDropdown.append($("<option></option>")
+   //            .attr("value","")
+   //            .text("Select Quantity above"));
+   //          k++
+   //        }
+   //      } 
+   //    productPrice.val(price);
+   //    if (totalqty == 0 || totalqty > 32) {
+   //      productTotal.html(0);
+   //    }
+   //    else{
         
-        var multiTotal = price * totalqty;
-        multiTotal = multiTotal.toFixed(2);
-        productTotal.html(multiTotal);
+   //      var multiTotal = price * totalqty;
+   //      multiTotal = multiTotal.toFixed(2);
+   //      productTotal.html(multiTotal);
       
-      }
+   //    }
       
-   }
+   // }
     grandTotal()
   });
   
