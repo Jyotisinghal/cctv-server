@@ -52,5 +52,5 @@ production:
   <<: *default
   adapter: mysql2
   database: cctv_deployer_production
-  username: root
+  username: cctv_deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
