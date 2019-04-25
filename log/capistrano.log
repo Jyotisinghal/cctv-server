@@ -1326,3 +1326,1144 @@ remote: Compressing objects:   0% (1/2957)   [Kremote: Compressing objects:   
  DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `<main>'
  DEBUG [a3d8e899] 	Tasks: TOP => environment
  DEBUG [a3d8e899] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-04-25 15:42:30 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ba369114] Running /usr/bin/env mkdir -p /tmp on 134.209.154.250
+ DEBUG [ba369114] Command: /usr/bin/env mkdir -p /tmp
+  INFO [679e9304] Finished in 1.978 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cctvserver-production-smarttechno.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cctvserver-production-smarttechno.sh 100.0%
+  INFO [0e778605] Running /usr/bin/env chmod 700 /tmp/git-ssh-cctvserver-production-smarttechno.sh on 134.209.154.250
+ DEBUG [0e778605] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cctvserver-production-smarttechno.sh
+  INFO [9dcfcae0] Finished in 0.246 seconds with exit status 0 (successful).
+  INFO [5a2be598] Running /usr/bin/env git ls-remote git@github.com:Jyotisinghal/cctv-server.git HEAD on 134.209.154.250
+ DEBUG [5a2be598] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git ls-remote git@github.com:Jyotisinghal/cctv-server.git HEAD )
+ DEBUG [ae8c977e] 	c36aa397609bce9b91fe7216cddeb62b536c6932	HEAD
+  INFO [ae8c977e] Finished in 3.363 seconds with exit status 0 (successful).
+  INFO [04e97e5d] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared /home/cctv_deployer/apps/cctvserver/releases on 134.209.154.250
+ DEBUG [04e97e5d] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared /home/cctv_deployer/apps/cctvserver/releases
+  INFO [abb719de] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [0f45cc66] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/shared/public/assets on 134.209.154.250
+ DEBUG [0f45cc66] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/shared/public/assets
+  INFO [20a534ff] Finished in 0.518 seconds with exit status 0 (successful).
+ DEBUG [a5ef46bf] Running [ -f /home/cctv_deployer/apps/cctvserver/current/REVISION ] on 134.209.154.250
+ DEBUG [a5ef46bf] Command: [ -f /home/cctv_deployer/apps/cctvserver/current/REVISION ]
+ DEBUG [1333c274] Finished in 0.191 seconds with exit status 1 (failed).
+ DEBUG [2bfc0e2b] Running [ -f /home/cctv_deployer/apps/cctvserver/repo/HEAD ] on 134.209.154.250
+ DEBUG [2bfc0e2b] Command: [ -f /home/cctv_deployer/apps/cctvserver/repo/HEAD ]
+ DEBUG [e699fa7f] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/cctv_deployer/apps/cctvserver/repo
+ DEBUG [a6ba28c0] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [a6ba28c0] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [68cde9c8] Finished in 0.195 seconds with exit status 0 (successful).
+  INFO [cb299e99] Running /usr/bin/env git remote set-url origin git@github.com:Jyotisinghal/cctv-server.git on 134.209.154.250
+ DEBUG [cb299e99] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git remote set-url origin git@github.com:Jyotisinghal/cctv-server.git )
+  INFO [a6e69364] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [0ee3edb9] Running /usr/bin/env git remote update --prune on 134.209.154.250
+ DEBUG [0ee3edb9] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0a04519a] 	Fetching origin
+ DEBUG [0a04519a] 	
+ DEBUG [0a04519a] 	remote: Enumerating objects: 59, done.[K
+remote: Counting objects:   1% (1/59)   [Kremote: Counting objects:   3% (2/59)   [Kremote: Counting objects:   5% (3/59)   [Kremote: Counting objects:   6% (4/59)   [Kremote: Counting objects:   8% (5/59)   [Kremote: Counting objects:  10% (6/59)   [Kremote: Counting objects:  11% (7/59)   [Kremote: Counting objects:  13% (8/59)   [Kremote: Counting objects:  15% (9/59)   [Kremote: Counting objects:  16% (10/59)   [Kremote: Counting objects:  18% (11/59)   [Kremote: Counting objects:  20% (12/59)   [Kremote: Counting objects:  22% (13/59)   [K
+ DEBUG [0a04519a] 	remote: Counting objects:  23% (14/59)   [Kremote: Counting objects:  25% (15/59)   [Kremote: Counting objects:  27% (16/59)   [Kremote: Counting objects:  28% (17/59)   [Kremote: Counting objects:  30% (18/59)   [Kremote: Counting objects:  32% (19/59)   [Kremote: Counting objects:  33% (20/59)   [Kremote: Counting objects:  35% (21/59)   [Kremote: Counting objects:  37% (22/59)   [Kremote: Counting objects:  38% (23/59)   [Kremote: Counting objects:  40% (24/59)   [Kremote: Counting objects:  42% (25/59)   [Kremote: Counting objects:  44% (26/59)   [Kremote: Counting objects:  45% (27/59)   [Kremote: Counting objects:  47% (28/59)   [Kremote: Counting objects:  49% (29/59)   [Kremote: Counting objects:  50% (30/59)   [Kremote: Counting objects:  52% (31/59)   [Kremote: Counting objects:  54% (32/59)   [Kremote: Counting objects:  55% (33/59)   [Kremote: Counting objects:  57% (34/59)   [Kremote: Counting objects:  59% (35/59)   [Kremote: Counting objects:  61% (36/59)   [Kremote: Counting objects:  62% (37/59)   [Kremote: Counting objects:  64% (38/59)   [Kremote: Counting objects:  66% (39/59)   [Kremote: Counting objects:  67% (40/59)   [Kremote: Counting objects:  69% (41/59)   [Kremote: Counting objects:  71% (42/59)   [Kremote: Counting objects:  72% (43/59)   [Kremote: Counting objects:  74% (44/59)   [Kremote: Counting objects:  76% (45/59)   [Kremote: Counting objects:  77% (46/59)   [Kremote: Counting objects:  79% (47/59)   [Kremote: Counting objects:  81% (48/59)   [Kremote: Counting objects:  83% (49/59)   [Kremote: Counting objects:  84% (50/59)   [Kremote: Counting objects:  86% (51/59)   [Kremote: Counting objects:  88% (52/59)   [Kremote: Counting objects:  89% (53/59)   [Kremote: Counting objects:  91% (54/59)   [Kremote: Counting objects:  93% (55/59)   [Kremote: Counting objects:  94% (56/59)   [Kremote: Counting objects:  96% (57/59)   [Kremote: Counting objects:  98% (58/59)   [Kremote: Counting objects: 100% (59/59)   [Kremote: Counting objects: 100% (59/59), done.[K
+remote: Compressing objects:  14% (1/7)   [K
+ DEBUG [0a04519a] 	remote: Compressing objects:  28% (2/7)   [K
+ DEBUG [0a04519a] 	remote: Compressing objects:  42% (3/7)   [K
+ DEBUG [0a04519a] 	remote: Compressing objects:  57% (4/7)   [K
+ DEBUG [0a04519a] 	remote: Compressing objects:  71% (5/7)   [K
+ DEBUG [0a04519a] 	remote: Compressing objects:  85% (6/7)   [K
+ DEBUG [0a04519a] 	remote: Compressing objects: 100% (7/7)   [K
+ DEBUG [0a04519a] 	remote: Compressing objects: 100% (7/7), done.[K
+ DEBUG [0a04519a] 	
+ DEBUG [0a04519a] 	Unpacking objects:   2% (1/37)   
+ DEBUG [0a04519a] 	Unpacking objects:   5% (2/37)   
+ DEBUG [0a04519a] 	Unpacking objects:   8% (3/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  10% (4/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  13% (5/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  16% (6/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  18% (7/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  21% (8/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  24% (9/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  27% (10/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  29% (11/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  32% (12/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  35% (13/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  37% (14/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  40% (15/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  43% (16/37)   
+ DEBUG [0a04519a] 	remote: Total 37 (delta 30), reused 37 (delta 30), pack-reused 0[K
+ DEBUG [0a04519a] 	Unpacking objects:  45% (17/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  48% (18/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  51% (19/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  54% (20/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  56% (21/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  59% (22/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  62% (23/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  64% (24/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  67% (25/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  70% (26/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  72% (27/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  75% (28/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  78% (29/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  81% (30/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  83% (31/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  86% (32/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  89% (33/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  91% (34/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  94% (35/37)   
+ DEBUG [0a04519a] 	Unpacking objects:  97% (36/37)   
+ DEBUG [0a04519a] 	Unpacking objects: 100% (37/37)   
+ DEBUG [0a04519a] 	Unpacking objects: 100% (37/37), done.
+ DEBUG [0a04519a] 	
+ DEBUG [0a04519a] 	From github.com:Jyotisinghal/cctv-server
+ DEBUG [0a04519a] 	
+ DEBUG [0a04519a] 	   89f10d11..c36aa397  master     -> master
+ DEBUG [0a04519a] 	
+  INFO [0a04519a] Finished in 4.260 seconds with exit status 0 (successful).
+ DEBUG [932a51f6] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [932a51f6] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [65a93c04] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO [0b9c829a] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425101236 on 134.209.154.250
+ DEBUG [0b9c829a] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425101236 )
+  INFO [9a4343e4] Finished in 0.188 seconds with exit status 0 (successful).
+  INFO [5b92d3bb] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/cctv_deployer/apps/cctvserver/releases/20190425101236 on 134.209.154.250
+ DEBUG [5b92d3bb] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/cctv_deployer/apps/cctvserver/releases/20190425101236 )
+  INFO [e0a87b48] Finished in 2.752 seconds with exit status 0 (successful).
+ DEBUG [cbfd267a] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [cbfd267a] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [5325392b] Finished in 0.254 seconds with exit status 0 (successful).
+ DEBUG [6c869813] Running /usr/bin/env git rev-list --max-count=1 master on 134.209.154.250
+ DEBUG [6c869813] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [14ecc979] 	c36aa397609bce9b91fe7216cddeb62b536c6932
+ DEBUG [14ecc979] 	
+ DEBUG [14ecc979] Finished in 0.230 seconds with exit status 0 (successful).
+ DEBUG [df001a5c] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [df001a5c] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi
+ DEBUG [891335cd] Finished in 0.467 seconds with exit status 0 (successful).
+  INFO [26adb49f] Running /usr/bin/env echo "c36aa397609bce9b91fe7216cddeb62b536c6932" >> REVISION on 134.209.154.250
+ DEBUG [26adb49f] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && /usr/bin/env echo "c36aa397609bce9b91fe7216cddeb62b536c6932" >> REVISION
+  INFO [6e195317] Finished in 0.183 seconds with exit status 0 (successful).
+ DEBUG [c93307b6] Running [ -f /etc/nginx/sites-enabled/default ] on 134.209.154.250
+ DEBUG [c93307b6] Command: [ -f /etc/nginx/sites-enabled/default ]
+ DEBUG [1b047081] Finished in 0.181 seconds with exit status 1 (failed).
+  INFO [f7bf0d7e] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/config on 134.209.154.250
+ DEBUG [f7bf0d7e] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/config
+  INFO [50e39d9e] Finished in 0.185 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf 100.0%
+  INFO copying: #<StringIO:0x00007f3ae403ac48> to: /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types 100.0%
+  INFO copying: #<StringIO:0x00007f3ae404f1e8> to: /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/database.yml 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/database.yml 100.0%
+  INFO copying: #<StringIO:0x00007f3ae4063c38> to: /home/cctv_deployer/apps/cctvserver/shared/config/database.yml
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation 100.0%
+  INFO copying: #<StringIO:0x00007f3ae4074e70> to: /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/monit 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/monit 100.0%
+  INFO copying: #<StringIO:0x00007f3ae40a62e0> to: /home/cctv_deployer/apps/cctvserver/shared/config/monit
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb 100.0%
+  INFO copying: #<StringIO:0x00007f3ae40cd778> to: /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh 100.0%
+  INFO copying: #<StringIO:0x00007f3ae40f4558> to: /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases 100.0%
+  INFO copying: #<StringIO:0x00007f3ae4126260> to: /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases
+ DEBUG [eb001f03] Running [ -f /etc/nginx/sites-enabled/cctvserver ] on 134.209.154.250
+ DEBUG [eb001f03] Command: [ -f /etc/nginx/sites-enabled/cctvserver ]
+ DEBUG [7033ee9d] Finished in 0.225 seconds with exit status 0 (successful).
+  INFO [30ff859b] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf /etc/nginx/sites-enabled/cctvserver on 134.209.154.250
+ DEBUG [30ff859b] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf /etc/nginx/sites-enabled/cctvserver
+  INFO [d06cf54e] Finished in 0.411 seconds with exit status 0 (successful).
+ DEBUG [132add61] Running [ -f /etc/nginx/mime.types ] on 134.209.154.250
+ DEBUG [132add61] Command: [ -f /etc/nginx/mime.types ]
+ DEBUG [e005240a] Finished in 0.301 seconds with exit status 0 (successful).
+  INFO [6f85567b] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types /etc/nginx/mime.types on 134.209.154.250
+ DEBUG [6f85567b] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types /etc/nginx/mime.types
+  INFO [dcca2dae] Finished in 0.194 seconds with exit status 0 (successful).
+ DEBUG [182b84a8] Running [ -f /etc/init.d/unicorn_cctvserver ] on 134.209.154.250
+ DEBUG [182b84a8] Command: [ -f /etc/init.d/unicorn_cctvserver ]
+ DEBUG [6570fa6c] Finished in 0.190 seconds with exit status 0 (successful).
+  INFO [6a491488] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh /etc/init.d/unicorn_cctvserver on 134.209.154.250
+ DEBUG [6a491488] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh /etc/init.d/unicorn_cctvserver
+  INFO [8fd7e8ca] Finished in 0.199 seconds with exit status 0 (successful).
+ DEBUG [703e621b] Running [ -f /etc/logrotate.d/cctvserver ] on 134.209.154.250
+ DEBUG [703e621b] Command: [ -f /etc/logrotate.d/cctvserver ]
+ DEBUG [9c1d215a] Finished in 0.183 seconds with exit status 0 (successful).
+  INFO [7aed02eb] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation /etc/logrotate.d/cctvserver on 134.209.154.250
+ DEBUG [7aed02eb] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation /etc/logrotate.d/cctvserver
+  INFO [5b1622fb] Finished in 0.644 seconds with exit status 0 (successful).
+ DEBUG [3b817278] Running [ -f .bash_aliases ] on 134.209.154.250
+ DEBUG [3b817278] Command: [ -f .bash_aliases ]
+ DEBUG [b488405f] Finished in 0.607 seconds with exit status 0 (successful).
+  INFO [dbcd967a] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases .bash_aliases on 134.209.154.250
+ DEBUG [dbcd967a] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases .bash_aliases
+  INFO [5768a115] Finished in 0.193 seconds with exit status 0 (successful).
+ DEBUG [efc0e6a0] Running [ -f /home/cctv_deployer/apps/cctvserver/releases/20190425101236/config/database.yml ] on 134.209.154.250
+ DEBUG [efc0e6a0] Command: [ -f /home/cctv_deployer/apps/cctvserver/releases/20190425101236/config/database.yml ]
+ DEBUG [08134c6e] Finished in 0.191 seconds with exit status 0 (successful).
+  INFO [2320caf7] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/database.yml /home/cctv_deployer/apps/cctvserver/releases/20190425101236/config/database.yml on 134.209.154.250
+ DEBUG [2320caf7] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/database.yml /home/cctv_deployer/apps/cctvserver/releases/20190425101236/config/database.yml
+  INFO [65acd8dc] Finished in 0.193 seconds with exit status 0 (successful).
+  INFO [6c3993d4] Running /usr/bin/env sudo /etc/init.d/nginx reload on 134.209.154.250
+ DEBUG [6c3993d4] Command: /usr/bin/env sudo /etc/init.d/nginx reload
+ DEBUG [7f1b4a07] 	[....] 
+ DEBUG [7f1b4a07] 	Reloading nginx configuration (via systemctl): nginx.service
+ DEBUG [7f1b4a07] 	[?25l
+ DEBUG [7f1b4a07] 	7
+ DEBUG [7f1b4a07] 	[1G
+ DEBUG [7f1b4a07] 	[[32m ok [39;49m
+ DEBUG [7f1b4a07] 	8
+ DEBUG [7f1b4a07] 	[?12l[?25h
+ DEBUG [7f1b4a07] 	.
+ DEBUG [7f1b4a07] 	
+  INFO [7f1b4a07] Finished in 0.308 seconds with exit status 0 (successful).
+  INFO [501d96bb] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425101236 /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp /home/cctv_deployer/apps/cctvserver/releases/20190425101236/vendor /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public on 134.209.154.250
+ DEBUG [501d96bb] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425101236 /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp /home/cctv_deployer/apps/cctvserver/releases/20190425101236/vendor /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public
+  INFO [fe29751c] Finished in 0.194 seconds with exit status 0 (successful).
+ DEBUG [074f620b] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/log ] on 134.209.154.250
+ DEBUG [074f620b] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/log ]
+ DEBUG [92961fa9] Finished in 0.183 seconds with exit status 1 (failed).
+ DEBUG [04ccb77c] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/log ] on 134.209.154.250
+ DEBUG [04ccb77c] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/log ]
+ DEBUG [bf164942] Finished in 0.188 seconds with exit status 0 (successful).
+  INFO [e22abf8c] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425101236/log on 134.209.154.250
+ DEBUG [e22abf8c] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425101236/log
+  INFO [f6decab6] Finished in 0.194 seconds with exit status 0 (successful).
+  INFO [7169bd2c] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/releases/20190425101236/log on 134.209.154.250
+ DEBUG [7169bd2c] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/releases/20190425101236/log
+  INFO [c697f603] Finished in 0.192 seconds with exit status 0 (successful).
+ DEBUG [fd804cca] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/pids ] on 134.209.154.250
+ DEBUG [fd804cca] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/pids ]
+ DEBUG [f02fe76b] Finished in 0.189 seconds with exit status 1 (failed).
+ DEBUG [f6775a53] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/pids ] on 134.209.154.250
+ DEBUG [f6775a53] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/pids ]
+ DEBUG [1841763c] Finished in 0.187 seconds with exit status 1 (failed).
+  INFO [13b78e90] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/pids on 134.209.154.250
+ DEBUG [13b78e90] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/pids
+  INFO [2b09bc05] Finished in 0.186 seconds with exit status 0 (successful).
+ DEBUG [3c30a302] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/cache ] on 134.209.154.250
+ DEBUG [3c30a302] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/cache ]
+ DEBUG [7a73e0af] Finished in 0.187 seconds with exit status 1 (failed).
+ DEBUG [61f177a4] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/cache ] on 134.209.154.250
+ DEBUG [61f177a4] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/cache ]
+ DEBUG [d30801ca] Finished in 0.494 seconds with exit status 0 (successful).
+  INFO [89d985e5] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/cache on 134.209.154.250
+ DEBUG [89d985e5] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/cache
+  INFO [9f8852fa] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [f0f56078] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/cache on 134.209.154.250
+ DEBUG [f0f56078] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/cache
+  INFO [80db4fc0] Finished in 0.234 seconds with exit status 0 (successful).
+ DEBUG [3f704411] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/sockets ] on 134.209.154.250
+ DEBUG [3f704411] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/sockets ]
+ DEBUG [5410115b] Finished in 0.179 seconds with exit status 1 (failed).
+ DEBUG [2d127aca] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/sockets ] on 134.209.154.250
+ DEBUG [2d127aca] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/sockets ]
+ DEBUG [ebc91b90] Finished in 0.190 seconds with exit status 1 (failed).
+  INFO [8afafdd6] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/sockets on 134.209.154.250
+ DEBUG [8afafdd6] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/releases/20190425101236/tmp/sockets
+  INFO [80d71d7f] Finished in 0.193 seconds with exit status 0 (successful).
+ DEBUG [27323ce3] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/vendor/bundle ] on 134.209.154.250
+ DEBUG [27323ce3] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/vendor/bundle ]
+ DEBUG [2ba30c78] Finished in 0.196 seconds with exit status 1 (failed).
+ DEBUG [c8638e54] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/vendor/bundle ] on 134.209.154.250
+ DEBUG [c8638e54] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/vendor/bundle ]
+ DEBUG [23421ef0] Finished in 0.182 seconds with exit status 1 (failed).
+  INFO [54900868] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/releases/20190425101236/vendor/bundle on 134.209.154.250
+ DEBUG [54900868] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/releases/20190425101236/vendor/bundle
+  INFO [ddbb4f5e] Finished in 0.194 seconds with exit status 0 (successful).
+ DEBUG [b1a2f6fc] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/system ] on 134.209.154.250
+ DEBUG [b1a2f6fc] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/system ]
+ DEBUG [2f2f798a] Finished in 0.190 seconds with exit status 1 (failed).
+ DEBUG [fcf8a6ef] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/system ] on 134.209.154.250
+ DEBUG [fcf8a6ef] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/system ]
+ DEBUG [7805935e] Finished in 0.443 seconds with exit status 1 (failed).
+  INFO [4273d5b3] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/system on 134.209.154.250
+ DEBUG [4273d5b3] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/system
+  INFO [273bced7] Finished in 0.238 seconds with exit status 0 (successful).
+ DEBUG [dba694ec] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets ] on 134.209.154.250
+ DEBUG [dba694ec] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets ]
+ DEBUG [7e503ad6] Finished in 0.189 seconds with exit status 1 (failed).
+ DEBUG [a28087b5] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets ] on 134.209.154.250
+ DEBUG [a28087b5] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets ]
+ DEBUG [7c8702fe] Finished in 0.195 seconds with exit status 0 (successful).
+  INFO [552d6713] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets on 134.209.154.250
+ DEBUG [552d6713] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets
+  INFO [4dcf69be] Finished in 0.190 seconds with exit status 0 (successful).
+  INFO [9707bf61] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/assets /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets on 134.209.154.250
+ DEBUG [9707bf61] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/assets /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets
+  INFO [f1e29269] Finished in 0.190 seconds with exit status 0 (successful).
+  INFO [b05c951c] Running RAILS_ENV=production bundle exec rake assets:precompile as smarttechno@localhost
+ DEBUG [b05c951c] Command: RAILS_ENV=production bundle exec rake assets:precompile
+ DEBUG [dbd7947f] 	Yarn executable was not detected in the system.
+ DEBUG [dbd7947f] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [dbd7947f] 	I, [2019-04-25T15:43:14.582151 #28571]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/application-89a3da4d685dcf7bf6912b247c5cc34ba1f9123a433d725b3e5403ee94cf6f83.js
+ DEBUG [dbd7947f] 	I, [2019-04-25T15:43:14.582438 #28571]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/application-89a3da4d685dcf7bf6912b247c5cc34ba1f9123a433d725b3e5403ee94cf6f83.js.gz
+  INFO [dbd7947f] Finished in 15.352 seconds with exit status 0 (successful).
+  INFO [8be00c22] Running rsync -av ./public/assets/ cctv_deployer@134.209.154.250:/home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/; as smarttechno@localhost
+ DEBUG [8be00c22] Command: rsync -av ./public/assets/ cctv_deployer@134.209.154.250:/home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/;
+ DEBUG [b009d227] 	sending incremental file list
+ DEBUG [b009d227] 	./
+ DEBUG [b009d227] 	.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json
+ DEBUG [b009d227] 	3d-building-1699248d097050f81fe49abb6237f6461344d50d26a234aec6c7e719b1e1007e.png
+ DEBUG [b009d227] 	active_admin-6b3c8ff2ecaf4d1fba8d39ba2b709ae92cce663ffe6ff6cd93365a1a82dbd154.css
+ DEBUG [b009d227] 	active_admin-6b3c8ff2ecaf4d1fba8d39ba2b709ae92cce663ffe6ff6cd93365a1a82dbd154.css.gz
+ DEBUG [b009d227] 	active_admin-6f1b843b5bbbbe3257701ffd3bd6475c519e5523a0e1604f9c9af6ec18e4ad25.css
+ DEBUG [b009d227] 	active_admin-6f1b843b5bbbbe3257701ffd3bd6475c519e5523a0e1604f9c9af6ec18e4ad25.css.gz
+ DEBUG [b009d227] 	active_admin-aad478f9674ed0cc76f83512b458a5e516b90e017d64c576f5f9eaf05ea52b38.js
+ DEBUG [b009d227] 	active_admin-aad478f9674ed0cc76f83512b458a5e516b90e017d64c576f5f9eaf05ea52b38.js.gz
+ DEBUG [b009d227] 	active_admin-e670a4b09c70a1cf0e546e3cc233273ec00d44a2fe841969cac0562998dbec41.js
+ DEBUG [b009d227] 	active_admin-e670a4b09c70a1cf0e546e3cc233273ec00d44a2fe841969cac0562998dbec41.js.gz
+ DEBUG [b009d227] 	address-84575dce298b927ed6192f989b43ba9e8b6e45370a11874648e1c7edf2684cff.png
+ DEBUG [b009d227] 	application-1f3e0e5f31f3bdca6275cea2868ed7feb213aa67f7194d532734cf921eb0d657.js
+ DEBUG [b009d227] 	application-1f3e0e5f31f3bdca6275cea2868ed7feb213aa67f7194d532734cf921eb0d657.js.gz
+ DEBUG [b009d227] 	application-2ba6862d3a6d015077ba51bdc6a6909537324f15342d16098e8fdb52500d6e1e.js
+ DEBUG [b009d227] 	application-2ba6862d3a6d015077ba51bdc6a6909537324f15342d16098e8fdb52500d6e1e.js.gz
+ DEBUG [b009d227] 	application-30325535bbc656600a30238cd5e21afddfbd17b7f5060e20a237ebd3167627c5.css
+ DEBUG [b009d227] 	application-30325535bbc656600a30238cd5e21afddfbd17b7f5060e20a237ebd3167627c5.css.gz
+ DEBUG [b009d227] 	application-53cae9712bb3292ba1376ff2c09eb0c3f84d13971cf7a635746e0f185fcddcde.css
+ DEBUG [b009d227] 	application-53cae9712bb3292ba1376ff2c09eb0c3f84d13971cf7a635746e0f185fcddcde.css.gz
+ DEBUG [b009d227] 	application-5ac48bfa3a8a3afd4f1a4897c2cb698d5d53bde621ff24cf5f2708c14c8841ed.css
+ DEBUG [b009d227] 	application-5ac48bfa3a8a3afd4f1a4897c2cb698d5d53bde621ff24cf5f2708c14c8841ed.css.gz
+ DEBUG [b009d227] 	application-5ac7f3e3866cb9cc35e458162b15dc9056ac848e8f9b29db12d63c794a125d3e.css
+ DEBUG [b009d227] 	application-5ac7f3e3866cb9cc35e458162b15dc9056ac848e8f9b29db12d63c794a125d3e.css.gz
+ DEBUG [b009d227] 	application-76f74fcb80b93c27e5de178ccdba90439cb41fedd583f209ef4b97caa69d5100.js
+ DEBUG [b009d227] 	application-89a3da4d685dcf7bf6912b247c5cc34ba1f9123a433d725b3e5403ee94cf6f83.js
+ DEBUG [b009d227] 	application-89a3da4d685dcf7bf6912b247c5cc34ba1f9123a433d725b3e5403ee94cf6f83.js.gz
+ DEBUG [b009d227] 	application-8bcfd4c7e75e8822364110290281c1e9031625b0b75199b4856d796007e76c6e.css
+ DEBUG [b009d227] 	application-8bcfd4c7e75e8822364110290281c1e9031625b0b75199b4856d796007e76c6e.css.gz
+ DEBUG [b009d227] 	application-8d1c05f5a5ff4284e8fd8318ee28c43dba8a0f80a6333f176b1441a0166d8908.js
+ DEBUG [b009d227] 	application-8d1c05f5a5ff4284e8fd8318ee28c43dba8a0f80a6333f176b1441a0166d8908.js.gz
+ DEBUG [b009d227] 	application-a1ad88e37b2de29c73e9f9aad83a7af977bb72e862175c442322e086f03811ed.css
+ DEBUG [b009d227] 	application-a1ad88e37b2de29c73e9f9aad83a7af977bb72e862175c442322e086f03811ed.css.gz
+ DEBUG [b009d227] 	application-b755d0e1817cbcbb947006e4ceedd9a0d39a639294fdfb7531ff406de49597bf.js
+ DEBUG [b009d227] 	application-b755d0e1817cbcbb947006e4ceedd9a0d39a639294fdfb7531ff406de49597bf.js.gz
+ DEBUG [b009d227] 	application-be4edcd884547bb7755a7d55187d2fb5f0cab7a2cd7efbf445cc7475211f4f1b.js
+ DEBUG [b009d227] 	application-be4edcd884547bb7755a7d55187d2fb5f0cab7a2cd7efbf445cc7475211f4f1b.js.gz
+ DEBUG [b009d227] 	application-d57c831f54252b22f5419fcd199ca0ab9e0518c4dff9a604ffb2b34ad9c31e72.css
+ DEBUG [b009d227] 	application-d57c831f54252b22f5419fcd199ca0ab9e0518c4dff9a604ffb2b34ad9c31e72.css.gz
+ DEBUG [b009d227] 	application-e5e0f9546d1d6977ea531c07bd2a2da2c90411c53ba2e4fb6519d0a4a18c8048.css
+ DEBUG [b009d227] 	application-e5e0f9546d1d6977ea531c07bd2a2da2c90411c53ba2e4fb6519d0a4a18c8048.css.gz
+ DEBUG [b009d227] 	application-f6db34f853e66fd1d3e81fd6f88c28d43cbc62946abb1c3c4316f0646e77e0d6.js
+ DEBUG [b009d227] 	application-f6db34f853e66fd1d3e81fd6f88c28d43cbc62946abb1c3c4316f0646e77e0d6.js.gz
+ DEBUG [b009d227] 	contact-bbef2277c837b094dfa00cc8211c79c57586c799ec006fc03790639c6c863b43.png
+ DEBUG [b009d227] 	fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2
+ DEBUG [b009d227] 	fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot
+ DEBUG [b009d227] 	fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz
+ DEBUG [b009d227] 	fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf
+ DEBUG [b009d227] 	fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz
+ DEBUG [b009d227] 	fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg
+ DEBUG [b009d227] 	fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg.gz
+ DEBUG [b009d227] 	fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff
+ DEBUG [b009d227] 	giphy-355f621049117a6906bdb6bf7bb45b442748c0f15c36dbdd02351896f434e3c2.gif
+ DEBUG [b009d227] 	house-326cd4d101934a10c1faf8abb5cd01745f5c2eabbe15266c3aee4ae97f27a662.png
+ DEBUG [b009d227] 	icon-082dc0021d49a7b9dbc7a738f0d66cbca05684c4e7f75d428960132908b6aa92.png
+ DEBUG [b009d227] 	logo-51e0611314374366c7615938fc657d8de425f923cb62fcdd1c5fdc14cb19dd8a.png
+ DEBUG [b009d227] 	logo_2-5f79199d78efd7d84e6fc38b556c8a285528c8dfe0fa32a2bad79c05d912d4bf.png
+ DEBUG [b009d227] 	active_admin/
+ DEBUG [b009d227] 	active_admin/nested_menu_arrow-15084d93c65c1964d7077700ea748bd2d70cfa2d4c19707c58a9c64e232dd442.gif
+ DEBUG [b009d227] 	active_admin/nested_menu_arrow_dark-7c43b8e0a5f8823875f49a093c9d7a6b374f885b6f9cc248ae9cd7e6e9b29034.gif
+ DEBUG [b009d227] 	active_admin/orderable-29374dbb55b0012d78a37c614d573bb3474f0779849b478a147d0f1845ca6617.png
+ DEBUG [b009d227] 	active_admin/print-2d8cfc19626d971a0d12e70aadf962b08033bf79d7909195045ebc1ce773ce9b.css
+ DEBUG [b009d227] 	active_admin/print-2d8cfc19626d971a0d12e70aadf962b08033bf79d7909195045ebc1ce773ce9b.css.gz
+ DEBUG [b009d227] 	active_admin/print-cf99cbf27fb92065a9eacd28e6fad48fa72cadaf6e0918790e8d35b11d8f99f6.css
+ DEBUG [b009d227] 	active_admin/print-cf99cbf27fb92065a9eacd28e6fad48fa72cadaf6e0918790e8d35b11d8f99f6.css.gz
+ DEBUG [b009d227] 	
+ DEBUG [b009d227] 	sent 9,210,881 bytes  received 1,228 bytes  1,674,928.91 bytes/sec
+ DEBUG [b009d227] 	total size is 9,200,585  speedup is 1.00
+  INFO [b009d227] Finished in 4.714 seconds with exit status 0 (successful).
+  INFO [d613bc84] Running /usr/bin/env sudo chmod -R 755 /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/ on 134.209.154.250
+ DEBUG [d613bc84] Command: /usr/bin/env sudo chmod -R 755 /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/
+  INFO [1a10e901] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [4f421ea4] Running rm -rf ./public/assets as smarttechno@localhost
+ DEBUG [4f421ea4] Command: rm -rf ./public/assets
+  INFO [9f591a83] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [1cfb3616] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [1cfb3616] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi
+ DEBUG [4b6110ea] Finished in 0.172 seconds with exit status 0 (successful).
+ DEBUG [24588b1b] Running /usr/bin/env bundle check --path /home/cctv_deployer/apps/cctvserver/shared/bundle on 134.209.154.250
+ DEBUG [24588b1b] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && /usr/bin/env bundle check --path /home/cctv_deployer/apps/cctvserver/shared/bundle
+ DEBUG [c4781509] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31mThe following gems are missing[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rake (12.3.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * concurrent-ruby (1.1.5)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * i18n (1.6.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * minitest (5.11.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * thread_safe (0.3.6)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * tzinfo (1.2.5)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * activesupport (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * builder (3.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * erubi (1.8.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * mini_portile2 (2.4.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * nokogiri (1.10.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * crass (1.0.4)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * loofah (2.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rails-html-sanitizer (1.0.4)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * actionview (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rack (2.0.7)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * actionpack (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * nio4r (2.3.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * websocket-extensions (0.1.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * websocket-driver (0.7.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * actioncable (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * globalid (0.4.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * activejob (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * mini_mime (1.0.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * mail (2.7.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * actionmailer (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * arbre (1.2.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * execjs (2.7.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * method_source (0.9.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * thor (0.20.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * railties (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * formtastic (3.1.5)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * formtastic_i18n (0.6.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * has_scope (0.7.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * responders (2.4.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * inherited_resources (1.10.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * jquery-rails (4.3.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * kaminari-core (1.1.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * kaminari-actionview (1.1.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * activemodel (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * arel (9.0.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * activerecord (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * kaminari-activerecord (1.1.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * kaminari (1.1.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * ransack (2.1.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rb-fsevent (0.10.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * ffi (1.10.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rb-inotify (0.10.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * sass (3.7.4)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * sprockets (3.7.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * activeadmin (1.4.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * mimemagic (0.3.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * marcel (0.3.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * activestorage (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * public_suffix (3.0.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * addressable (2.6.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * net-ssh (5.2.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * net-scp (2.0.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * sshkit (1.18.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * io-like (0.3.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * archive-zip (0.12.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * bcrypt (3.1.12)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * bindex (0.7.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * msgpack (1.2.10)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * bootsnap (1.4.4)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * byebug (11.0.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * capistrano (3.10.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * capistrano-bundler (1.5.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * capistrano-rbenv (2.1.4)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * regexp_parser (1.4.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * xpath (3.2.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * capybara (3.18.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * character_set (1.2.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * childprocess (1.0.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * chromedriver-helper (2.1.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * regexp_property_values (0.3.5)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * js_regex (3.1.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * sprockets-rails (3.2.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rails (5.2.3)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * client_side_validations (14.0.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * orm_adapter (0.5.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * warden (1.2.8)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * devise (4.6.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * font-awesome-rails (4.7.0.5)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * multi_json (1.13.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * jbuilder (2.8.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * listen (3.1.5)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * mysql2 (0.5.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * puma (3.12.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * rubyzip (1.2.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * tilt (2.0.9)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * sass-rails (5.0.7)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * selenium-webdriver (3.142.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * simple_form (4.1.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * spring (2.0.2)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * turbolinks-source (5.2.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * turbolinks (5.2.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * uglifier (4.1.20)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[31m * web-console (3.7.0)[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [c4781509] 	
+ DEBUG [c4781509] Finished in 0.876 seconds with exit status 1 (failed).
+  INFO [794f69a1] Running /usr/bin/env bundle install --path /home/cctv_deployer/apps/cctvserver/shared/bundle --jobs 4 --without development test --deployment --quiet on 134.209.154.250
+ DEBUG [794f69a1] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && /usr/bin/env bundle install --path /home/cctv_deployer/apps/cctvserver/shared/bundle --jobs 4 --without development test --deployment --quiet
+  INFO [16eb1651] Finished in 166.231 seconds with exit status 0 (successful).
+ DEBUG [803cddc6] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [803cddc6] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi
+ DEBUG [940a9204] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [597fb60d] Running bundle exec rake assets:precompile on 134.209.154.250
+ DEBUG [597fb60d] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; bundle exec rake assets:precompile )
+ DEBUG [f1d1978f] 	Yarn executable was not detected in the system.
+ DEBUG [f1d1978f] 	
+ DEBUG [f1d1978f] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [f1d1978f] 	
+  INFO [f1d1978f] Finished in 45.182 seconds with exit status 0 (successful).
+ DEBUG [e8f9b603] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [e8f9b603] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi
+ DEBUG [ac83096a] Finished in 0.188 seconds with exit status 0 (successful).
+  INFO [fcd0c2f9] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425101236/assets_manifest_backup on 134.209.154.250
+ DEBUG [fcd0c2f9] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425101236/assets_manifest_backup
+  INFO [048b4408] Finished in 0.193 seconds with exit status 0 (successful).
+ DEBUG [84f5e124] Running /usr/bin/env ls /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/.sprockets-manifest* on 134.209.154.250
+ DEBUG [84f5e124] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && /usr/bin/env ls /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/.sprockets-manifest*
+ DEBUG [3dfc521e] 	/home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json
+ DEBUG [3dfc521e] 	
+ DEBUG [3dfc521e] Finished in 0.224 seconds with exit status 0 (successful).
+ DEBUG [af38fbd5] Running /usr/bin/env ls /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/.sprockets-manifest* on 134.209.154.250
+ DEBUG [af38fbd5] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && /usr/bin/env ls /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/.sprockets-manifest*
+ DEBUG [735d13f6] 	/home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json
+ DEBUG [735d13f6] 	
+ DEBUG [735d13f6] Finished in 0.183 seconds with exit status 0 (successful).
+  INFO [a870d19b] Running /usr/bin/env cp /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json /home/cctv_deployer/apps/cctvserver/releases/20190425101236/assets_manifest_backup on 134.209.154.250
+ DEBUG [a870d19b] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && /usr/bin/env cp /home/cctv_deployer/apps/cctvserver/releases/20190425101236/public/assets/.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json /home/cctv_deployer/apps/cctvserver/releases/20190425101236/assets_manifest_backup
+  INFO [42f23692] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [d5253899] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [d5253899] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425101236; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425101236'" 1>&2; false; fi
+ DEBUG [364c19d8] Finished in 0.185 seconds with exit status 0 (successful).
+  INFO [e319196b] Running bundle exec rake db:migrate on 134.209.154.250
+ DEBUG [e319196b] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425101236 && ( export RAILS_ENV="production" ; bundle exec rake db:migrate )
+ DEBUG [b580472d] 	rake aborted!
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	Mysql2::Error: Access denied for user 'root'@'localhost'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/mysql2-0.5.2/lib/mysql2/client.rb:90:in `connect'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/mysql2-0.5.2/lib/mysql2/client.rb:90:in `initialize'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib
+ DEBUG [b580472d] 	/active_record/connection_handling.rb:90:in `connection'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/usr/local/bin/bundle:23:in `load'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	/usr/local/bin/bundle:23:in `<main>'
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	Tasks: TOP => db:migrate
+ DEBUG [b580472d] 	
+ DEBUG [b580472d] 	(See full trace by running task with --trace)
+ DEBUG [b580472d] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-04-25 15:54:33 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2ff42b30] Running /usr/bin/env mkdir -p /tmp on 134.209.154.250
+ DEBUG [2ff42b30] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a24042d0] Finished in 1.611 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cctvserver-production-smarttechno.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cctvserver-production-smarttechno.sh 100.0%
+  INFO [69d777e4] Running /usr/bin/env chmod 700 /tmp/git-ssh-cctvserver-production-smarttechno.sh on 134.209.154.250
+ DEBUG [69d777e4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cctvserver-production-smarttechno.sh
+  INFO [2505d209] Finished in 0.178 seconds with exit status 0 (successful).
+  INFO [081e6379] Running /usr/bin/env git ls-remote git@github.com:Jyotisinghal/cctv-server.git HEAD on 134.209.154.250
+ DEBUG [081e6379] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git ls-remote git@github.com:Jyotisinghal/cctv-server.git HEAD )
+ DEBUG [cf96a039] 	c36aa397609bce9b91fe7216cddeb62b536c6932
+ DEBUG [cf96a039] 		HEAD
+  INFO [cf96a039] Finished in 3.285 seconds with exit status 0 (successful).
+  INFO [14a30293] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared /home/cctv_deployer/apps/cctvserver/releases on 134.209.154.250
+ DEBUG [14a30293] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared /home/cctv_deployer/apps/cctvserver/releases
+  INFO [c1909a19] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [dd048edc] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/shared/public/assets on 134.209.154.250
+ DEBUG [dd048edc] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/shared/public/assets
+  INFO [8a3565b0] Finished in 0.172 seconds with exit status 0 (successful).
+ DEBUG [9b5d9de1] Running [ -f /home/cctv_deployer/apps/cctvserver/current/REVISION ] on 134.209.154.250
+ DEBUG [9b5d9de1] Command: [ -f /home/cctv_deployer/apps/cctvserver/current/REVISION ]
+ DEBUG [d2ac0124] Finished in 0.171 seconds with exit status 1 (failed).
+ DEBUG [27f19d41] Running [ -f /home/cctv_deployer/apps/cctvserver/repo/HEAD ] on 134.209.154.250
+ DEBUG [27f19d41] Command: [ -f /home/cctv_deployer/apps/cctvserver/repo/HEAD ]
+ DEBUG [320d74ae] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/cctv_deployer/apps/cctvserver/repo
+ DEBUG [7cfde8b8] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [7cfde8b8] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [8d3725a7] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [358409db] Running /usr/bin/env git remote set-url origin git@github.com:Jyotisinghal/cctv-server.git on 134.209.154.250
+ DEBUG [358409db] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git remote set-url origin git@github.com:Jyotisinghal/cctv-server.git )
+  INFO [cee195e6] Finished in 0.182 seconds with exit status 0 (successful).
+  INFO [d717ed74] Running /usr/bin/env git remote update --prune on 134.209.154.250
+ DEBUG [d717ed74] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [30cefaee] 	Fetching origin
+ DEBUG [30cefaee] 	
+  INFO [30cefaee] Finished in 3.583 seconds with exit status 0 (successful).
+ DEBUG [e3b19c30] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [e3b19c30] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [003422ac] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [752e697d] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425102439 on 134.209.154.250
+ DEBUG [752e697d] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425102439 )
+  INFO [65f4c166] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [e9a2c890] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/cctv_deployer/apps/cctvserver/releases/20190425102439 on 134.209.154.250
+ DEBUG [e9a2c890] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/cctv_deployer/apps/cctvserver/releases/20190425102439 )
+  INFO [446988cd] Finished in 3.063 seconds with exit status 0 (successful).
+ DEBUG [3a7dd418] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [3a7dd418] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [338b5e0f] Finished in 0.174 seconds with exit status 0 (successful).
+ DEBUG [0ea4aa81] Running /usr/bin/env git rev-list --max-count=1 master on 134.209.154.250
+ DEBUG [0ea4aa81] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [84951d5f] 	c36aa397609bce9b91fe7216cddeb62b536c6932
+ DEBUG [84951d5f] 	
+ DEBUG [84951d5f] Finished in 0.181 seconds with exit status 0 (successful).
+ DEBUG [c370873b] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [c370873b] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi
+ DEBUG [3406c0a1] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [42d04443] Running /usr/bin/env echo "c36aa397609bce9b91fe7216cddeb62b536c6932" >> REVISION on 134.209.154.250
+ DEBUG [42d04443] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && /usr/bin/env echo "c36aa397609bce9b91fe7216cddeb62b536c6932" >> REVISION
+  INFO [7d923645] Finished in 0.186 seconds with exit status 0 (successful).
+ DEBUG [7e78e0e2] Running [ -f /etc/nginx/sites-enabled/default ] on 134.209.154.250
+ DEBUG [7e78e0e2] Command: [ -f /etc/nginx/sites-enabled/default ]
+ DEBUG [4735adfb] Finished in 0.172 seconds with exit status 1 (failed).
+  INFO [64c43b75] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/config on 134.209.154.250
+ DEBUG [64c43b75] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/config
+  INFO [117ed3e5] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf 100.0%
+  INFO copying: #<StringIO:0x00007fd3380b42b8> to: /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types 100.0%
+  INFO copying: #<StringIO:0x00007fd3380e8310> to: /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/database.yml 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/database.yml 100.0%
+  INFO copying: #<StringIO:0x00007fd338114de8> to: /home/cctv_deployer/apps/cctvserver/shared/config/database.yml
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation 100.0%
+  INFO copying: #<StringIO:0x00007fd33813df18> to: /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/monit 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/monit 100.0%
+  INFO copying: #<StringIO:0x00007fd33817f2b0> to: /home/cctv_deployer/apps/cctvserver/shared/config/monit
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb 100.0%
+  INFO copying: #<StringIO:0x0000559cd4142898> to: /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh 100.0%
+  INFO copying: #<StringIO:0x00007fd3381f5398> to: /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases 100.0%
+  INFO copying: #<StringIO:0x00007fd33821f0a8> to: /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases
+ DEBUG [c50d7908] Running [ -f /etc/nginx/sites-enabled/cctvserver ] on 134.209.154.250
+ DEBUG [c50d7908] Command: [ -f /etc/nginx/sites-enabled/cctvserver ]
+ DEBUG [e154b537] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO [955f039c] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf /etc/nginx/sites-enabled/cctvserver on 134.209.154.250
+ DEBUG [955f039c] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf /etc/nginx/sites-enabled/cctvserver
+  INFO [f8d4d749] Finished in 0.194 seconds with exit status 0 (successful).
+ DEBUG [55cc9d44] Running [ -f /etc/nginx/mime.types ] on 134.209.154.250
+ DEBUG [55cc9d44] Command: [ -f /etc/nginx/mime.types ]
+ DEBUG [82e0717c] Finished in 0.178 seconds with exit status 0 (successful).
+  INFO [e9a18524] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types /etc/nginx/mime.types on 134.209.154.250
+ DEBUG [e9a18524] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types /etc/nginx/mime.types
+  INFO [b5ecad40] Finished in 0.195 seconds with exit status 0 (successful).
+ DEBUG [60dadeb2] Running [ -f /etc/init.d/unicorn_cctvserver ] on 134.209.154.250
+ DEBUG [60dadeb2] Command: [ -f /etc/init.d/unicorn_cctvserver ]
+ DEBUG [60fdb3d5] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [aabeaec0] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh /etc/init.d/unicorn_cctvserver on 134.209.154.250
+ DEBUG [aabeaec0] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh /etc/init.d/unicorn_cctvserver
+  INFO [e4a3f917] Finished in 0.184 seconds with exit status 0 (successful).
+ DEBUG [cefcb69b] Running [ -f /etc/logrotate.d/cctvserver ] on 134.209.154.250
+ DEBUG [cefcb69b] Command: [ -f /etc/logrotate.d/cctvserver ]
+ DEBUG [67291462] Finished in 0.187 seconds with exit status 0 (successful).
+  INFO [a3d895a1] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation /etc/logrotate.d/cctvserver on 134.209.154.250
+ DEBUG [a3d895a1] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation /etc/logrotate.d/cctvserver
+  INFO [f9a8de6e] Finished in 0.188 seconds with exit status 0 (successful).
+ DEBUG [3328d230] Running [ -f .bash_aliases ] on 134.209.154.250
+ DEBUG [3328d230] Command: [ -f .bash_aliases ]
+ DEBUG [8b09cd7c] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [43fe94b9] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases .bash_aliases on 134.209.154.250
+ DEBUG [43fe94b9] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases .bash_aliases
+  INFO [4487fd3d] Finished in 0.189 seconds with exit status 0 (successful).
+ DEBUG [da6f72bd] Running [ -f /home/cctv_deployer/apps/cctvserver/releases/20190425102439/config/database.yml ] on 134.209.154.250
+ DEBUG [da6f72bd] Command: [ -f /home/cctv_deployer/apps/cctvserver/releases/20190425102439/config/database.yml ]
+ DEBUG [ed0ceea6] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [f3e1bbe1] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/database.yml /home/cctv_deployer/apps/cctvserver/releases/20190425102439/config/database.yml on 134.209.154.250
+ DEBUG [f3e1bbe1] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/database.yml /home/cctv_deployer/apps/cctvserver/releases/20190425102439/config/database.yml
+  INFO [b9020f8b] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [053acfab] Running /usr/bin/env sudo /etc/init.d/nginx reload on 134.209.154.250
+ DEBUG [053acfab] Command: /usr/bin/env sudo /etc/init.d/nginx reload
+ DEBUG [d4964bd0] 	[....] 
+ DEBUG [d4964bd0] 	Reloading nginx configuration (via systemctl): nginx.service
+ DEBUG [d4964bd0] 	[?25l
+ DEBUG [d4964bd0] 	7
+ DEBUG [d4964bd0] 	[1G
+ DEBUG [d4964bd0] 	[[32m ok [39;49m
+ DEBUG [d4964bd0] 	8
+ DEBUG [d4964bd0] 	[?12l[?25h
+ DEBUG [d4964bd0] 	.
+ DEBUG [d4964bd0] 	
+  INFO [d4964bd0] Finished in 0.590 seconds with exit status 0 (successful).
+  INFO [69416924] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425102439 /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp /home/cctv_deployer/apps/cctvserver/releases/20190425102439/vendor /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public on 134.209.154.250
+ DEBUG [69416924] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425102439 /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp /home/cctv_deployer/apps/cctvserver/releases/20190425102439/vendor /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public
+  INFO [b06a9a11] Finished in 0.182 seconds with exit status 0 (successful).
+ DEBUG [bce77e24] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/log ] on 134.209.154.250
+ DEBUG [bce77e24] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/log ]
+ DEBUG [a1c144ee] Finished in 0.171 seconds with exit status 1 (failed).
+ DEBUG [a69f193c] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/log ] on 134.209.154.250
+ DEBUG [a69f193c] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/log ]
+ DEBUG [c05e747f] Finished in 0.518 seconds with exit status 0 (successful).
+  INFO [43eb99a6] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425102439/log on 134.209.154.250
+ DEBUG [43eb99a6] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425102439/log
+  INFO [98072ee6] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [3cf18b6e] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/releases/20190425102439/log on 134.209.154.250
+ DEBUG [3cf18b6e] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/releases/20190425102439/log
+  INFO [ff571b33] Finished in 0.542 seconds with exit status 0 (successful).
+ DEBUG [53ba4726] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/pids ] on 134.209.154.250
+ DEBUG [53ba4726] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/pids ]
+ DEBUG [edd619e5] Finished in 0.216 seconds with exit status 1 (failed).
+ DEBUG [a53851bb] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/pids ] on 134.209.154.250
+ DEBUG [a53851bb] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/pids ]
+ DEBUG [f6a8e966] Finished in 0.253 seconds with exit status 1 (failed).
+  INFO [dc36e699] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/pids on 134.209.154.250
+ DEBUG [dc36e699] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/pids
+  INFO [9ef9fa06] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG [45fd909a] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/cache ] on 134.209.154.250
+ DEBUG [45fd909a] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/cache ]
+ DEBUG [69abc49d] Finished in 0.182 seconds with exit status 1 (failed).
+ DEBUG [07efe87b] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/cache ] on 134.209.154.250
+ DEBUG [07efe87b] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/cache ]
+ DEBUG [f4511dcf] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [15e6d3c8] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/cache on 134.209.154.250
+ DEBUG [15e6d3c8] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/cache
+  INFO [aaf12884] Finished in 0.630 seconds with exit status 0 (successful).
+  INFO [5aea655a] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/cache on 134.209.154.250
+ DEBUG [5aea655a] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/cache
+  INFO [b4ddd770] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG [74a17b2f] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/sockets ] on 134.209.154.250
+ DEBUG [74a17b2f] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/sockets ]
+ DEBUG [8f310d53] Finished in 0.177 seconds with exit status 1 (failed).
+ DEBUG [796bfd32] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/sockets ] on 134.209.154.250
+ DEBUG [796bfd32] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/sockets ]
+ DEBUG [96b6eb03] Finished in 0.173 seconds with exit status 1 (failed).
+  INFO [6de3f131] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/sockets on 134.209.154.250
+ DEBUG [6de3f131] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/releases/20190425102439/tmp/sockets
+  INFO [9bde78b5] Finished in 0.182 seconds with exit status 0 (successful).
+ DEBUG [090734bd] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/vendor/bundle ] on 134.209.154.250
+ DEBUG [090734bd] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/vendor/bundle ]
+ DEBUG [86f8d958] Finished in 0.274 seconds with exit status 1 (failed).
+ DEBUG [edd14fa7] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/vendor/bundle ] on 134.209.154.250
+ DEBUG [edd14fa7] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/vendor/bundle ]
+ DEBUG [2093f375] Finished in 0.178 seconds with exit status 1 (failed).
+  INFO [90e90e6a] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/releases/20190425102439/vendor/bundle on 134.209.154.250
+ DEBUG [90e90e6a] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/releases/20190425102439/vendor/bundle
+  INFO [17e6c9e4] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [ae78b099] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/system ] on 134.209.154.250
+ DEBUG [ae78b099] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/system ]
+ DEBUG [99ed96d1] Finished in 0.180 seconds with exit status 1 (failed).
+ DEBUG [03c1a609] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/system ] on 134.209.154.250
+ DEBUG [03c1a609] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/system ]
+ DEBUG [b596c10a] Finished in 0.171 seconds with exit status 1 (failed).
+  INFO [efc6a3a3] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/system on 134.209.154.250
+ DEBUG [efc6a3a3] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/system
+  INFO [2d55900d] Finished in 0.175 seconds with exit status 0 (successful).
+ DEBUG [ae692395] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets ] on 134.209.154.250
+ DEBUG [ae692395] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets ]
+ DEBUG [b39b034b] Finished in 0.184 seconds with exit status 1 (failed).
+ DEBUG [64a1413e] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets ] on 134.209.154.250
+ DEBUG [64a1413e] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets ]
+ DEBUG [4ac437ec] Finished in 0.512 seconds with exit status 0 (successful).
+  INFO [cdf1c6f9] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets on 134.209.154.250
+ DEBUG [cdf1c6f9] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets
+  INFO [61b5df38] Finished in 0.230 seconds with exit status 0 (successful).
+  INFO [980fa5c9] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/assets /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets on 134.209.154.250
+ DEBUG [980fa5c9] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/assets /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets
+  INFO [9c19a08d] Finished in 0.182 seconds with exit status 0 (successful).
+  INFO [b3ce52d7] Running RAILS_ENV=production bundle exec rake assets:precompile as smarttechno@localhost
+ DEBUG [b3ce52d7] Command: RAILS_ENV=production bundle exec rake assets:precompile
+ DEBUG [b9a2b4ae] 	Yarn executable was not detected in the system.
+ DEBUG [b9a2b4ae] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.827060 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin-6f1b843b5bbbbe3257701ffd3bd6475c519e5523a0e1604f9c9af6ec18e4ad25.css
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.827306 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin-6f1b843b5bbbbe3257701ffd3bd6475c519e5523a0e1604f9c9af6ec18e4ad25.css.gz
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.827963 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin/nested_menu_arrow-15084d93c65c1964d7077700ea748bd2d70cfa2d4c19707c58a9c64e232dd442.gif
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.828968 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin/nested_menu_arrow_dark-7c43b8e0a5f8823875f49a093c9d7a6b374f885b6f9cc248ae9cd7e6e9b29034.gif
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.829514 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin/orderable-29374dbb55b0012d78a37c614d573bb3474f0779849b478a147d0f1845ca6617.png
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.831170 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin/print-cf99cbf27fb92065a9eacd28e6fad48fa72cadaf6e0918790e8d35b11d8f99f6.css
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.831300 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin/print-cf99cbf27fb92065a9eacd28e6fad48fa72cadaf6e0918790e8d35b11d8f99f6.css.gz
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.887550 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin-aad478f9674ed0cc76f83512b458a5e516b90e017d64c576f5f9eaf05ea52b38.js
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.887763 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/active_admin-aad478f9674ed0cc76f83512b458a5e516b90e017d64c576f5f9eaf05ea52b38.js.gz
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.889658 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/3d-building-1699248d097050f81fe49abb6237f6461344d50d26a234aec6c7e719b1e1007e.png
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.890714 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/address-84575dce298b927ed6192f989b43ba9e8b6e45370a11874648e1c7edf2684cff.png
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.891681 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/contact-bbef2277c837b094dfa00cc8211c79c57586c799ec006fc03790639c6c863b43.png
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.892612 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/giphy-355f621049117a6906bdb6bf7bb45b442748c0f15c36dbdd02351896f434e3c2.gif
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.893594 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/house-326cd4d101934a10c1faf8abb5cd01745f5c2eabbe15266c3aee4ae97f27a662.png
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.894510 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/icon-082dc0021d49a7b9dbc7a738f0d66cbca05684c4e7f75d428960132908b6aa92.png
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.895421 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/logo-51e0611314374366c7615938fc657d8de425f923cb62fcdd1c5fdc14cb19dd8a.png
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.896356 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/logo_2-5f79199d78efd7d84e6fc38b556c8a285528c8dfe0fa32a2bad79c05d912d4bf.png
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.913430 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/application-89a3da4d685dcf7bf6912b247c5cc34ba1f9123a433d725b3e5403ee94cf6f83.js
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.913592 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/application-89a3da4d685dcf7bf6912b247c5cc34ba1f9123a433d725b3e5403ee94cf6f83.js.gz
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.920581 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/application-53cae9712bb3292ba1376ff2c09eb0c3f84d13971cf7a635746e0f185fcddcde.css
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.921250 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/application-53cae9712bb3292ba1376ff2c09eb0c3f84d13971cf7a635746e0f185fcddcde.css.gz
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.922013 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.922564 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.923744 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.933930 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.935541 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.936483 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.945191 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg
+ DEBUG [b9a2b4ae] 	I, [2019-04-25T15:55:02.945664 #28903]  INFO -- : Writing /home/smarttechno/cctv-server/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg.gz
+  INFO [b9a2b4ae] Finished in 1.863 seconds with exit status 0 (successful).
+  INFO [43e60ea1] Running rsync -av ./public/assets/ cctv_deployer@134.209.154.250:/home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/; as smarttechno@localhost
+ DEBUG [43e60ea1] Command: rsync -av ./public/assets/ cctv_deployer@134.209.154.250:/home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/;
+ DEBUG [e361b89b] 	sending incremental file list
+ DEBUG [e361b89b] 	./
+ DEBUG [e361b89b] 	.sprockets-manifest-ebbf77c503f8375d5afc4558774311af.json
+ DEBUG [e361b89b] 	active_admin-6f1b843b5bbbbe3257701ffd3bd6475c519e5523a0e1604f9c9af6ec18e4ad25.css
+ DEBUG [e361b89b] 	active_admin-6f1b843b5bbbbe3257701ffd3bd6475c519e5523a0e1604f9c9af6ec18e4ad25.css.gz
+ DEBUG [e361b89b] 	active_admin-aad478f9674ed0cc76f83512b458a5e516b90e017d64c576f5f9eaf05ea52b38.js
+ DEBUG [e361b89b] 	active_admin-aad478f9674ed0cc76f83512b458a5e516b90e017d64c576f5f9eaf05ea52b38.js.gz
+ DEBUG [e361b89b] 	fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2
+ DEBUG [e361b89b] 	fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot
+ DEBUG [e361b89b] 	fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz
+ DEBUG [e361b89b] 	fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf
+ DEBUG [e361b89b] 	fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz
+ DEBUG [e361b89b] 	fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg
+ DEBUG [e361b89b] 	fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg.gz
+ DEBUG [e361b89b] 	fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff
+ DEBUG [e361b89b] 	active_admin/
+ DEBUG [e361b89b] 	active_admin/nested_menu_arrow-15084d93c65c1964d7077700ea748bd2d70cfa2d4c19707c58a9c64e232dd442.gif
+ DEBUG [e361b89b] 	active_admin/nested_menu_arrow_dark-7c43b8e0a5f8823875f49a093c9d7a6b374f885b6f9cc248ae9cd7e6e9b29034.gif
+ DEBUG [e361b89b] 	active_admin/orderable-29374dbb55b0012d78a37c614d573bb3474f0779849b478a147d0f1845ca6617.png
+ DEBUG [e361b89b] 	active_admin/print-cf99cbf27fb92065a9eacd28e6fad48fa72cadaf6e0918790e8d35b11d8f99f6.css
+ DEBUG [e361b89b] 	active_admin/print-cf99cbf27fb92065a9eacd28e6fad48fa72cadaf6e0918790e8d35b11d8f99f6.css.gz
+ DEBUG [e361b89b] 	
+ DEBUG [e361b89b] 	sent 26,254 bytes  received 14,973 bytes  27,484.67 bytes/sec
+ DEBUG [e361b89b] 	total size is 2,385,515  speedup is 57.86
+  INFO [e361b89b] Finished in 1.878 seconds with exit status 0 (successful).
+  INFO [ff732610] Running /usr/bin/env sudo chmod -R 755 /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/ on 134.209.154.250
+ DEBUG [ff732610] Command: /usr/bin/env sudo chmod -R 755 /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/
+  INFO [c46f4f04] Finished in 0.104 seconds with exit status 0 (successful).
+  INFO [1e7e8f25] Running rm -rf ./public/assets as smarttechno@localhost
+ DEBUG [1e7e8f25] Command: rm -rf ./public/assets
+  INFO [4edee957] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [a66d1205] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [a66d1205] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi
+ DEBUG [8bfd7466] Finished in 0.181 seconds with exit status 0 (successful).
+ DEBUG [28178886] Running /usr/bin/env bundle check --path /home/cctv_deployer/apps/cctvserver/shared/bundle on 134.209.154.250
+ DEBUG [28178886] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && /usr/bin/env bundle check --path /home/cctv_deployer/apps/cctvserver/shared/bundle
+ DEBUG [9fa30226] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31mThe following gems are missing[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * public_suffix (3.0.3)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * addressable (2.6.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * net-ssh (5.2.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * net-scp (2.0.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * sshkit (1.18.2)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * airbrussh (1.3.1)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * io-like (0.3.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * archive-zip (0.12.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * bindex (0.7.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * byebug (11.0.1)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * capistrano (3.10.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * capistrano-bundler (1.5.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * capistrano-rails (1.4.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * capistrano-rbenv (2.1.4)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * xpath (3.2.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * capybara (3.18.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * childprocess (1.0.1)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * chromedriver-helper (2.1.1)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * listen (3.1.5)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * rubyzip (1.2.2)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * selenium-webdriver (3.142.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * spring (2.0.2)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[31m * web-console (3.7.0)[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [9fa30226] 	
+ DEBUG [9fa30226] Finished in 0.753 seconds with exit status 1 (failed).
+  INFO [d44ff7f2] Running /usr/bin/env bundle install --path /home/cctv_deployer/apps/cctvserver/shared/bundle --jobs 4 --without development test --deployment --quiet on 134.209.154.250
+ DEBUG [d44ff7f2] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && /usr/bin/env bundle install --path /home/cctv_deployer/apps/cctvserver/shared/bundle --jobs 4 --without development test --deployment --quiet
+  INFO [78acf52f] Finished in 1.146 seconds with exit status 0 (successful).
+ DEBUG [9acf7366] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [9acf7366] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi
+ DEBUG [7649f8b0] Finished in 0.182 seconds with exit status 0 (successful).
+  INFO [a2af7ee7] Running bundle exec rake assets:precompile on 134.209.154.250
+ DEBUG [a2af7ee7] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; bundle exec rake assets:precompile )
+ DEBUG [af021842] 	Yarn executable was not detected in the system.
+ DEBUG [af021842] 	
+ DEBUG [af021842] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [af021842] 	
+  INFO [af021842] Finished in 3.706 seconds with exit status 0 (successful).
+ DEBUG [4d5651e6] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [4d5651e6] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi
+ DEBUG [bbeee527] Finished in 0.172 seconds with exit status 0 (successful).
+  INFO [7cce9717] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425102439/assets_manifest_backup on 134.209.154.250
+ DEBUG [7cce9717] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425102439/assets_manifest_backup
+  INFO [4fc5ba28] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [223a3fda] Running /usr/bin/env ls /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest* on 134.209.154.250
+ DEBUG [223a3fda] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && /usr/bin/env ls /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest*
+ DEBUG [6151865c] 	/home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json
+ DEBUG [6151865c] 	
+ DEBUG [6151865c] 	/home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest-ebbf77c503f8375d5afc4558774311af.json
+ DEBUG [6151865c] 	
+ DEBUG [6151865c] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [89fc61f9] Running /usr/bin/env ls /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest* on 134.209.154.250
+ DEBUG [89fc61f9] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && /usr/bin/env ls /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest*
+ DEBUG [739c5b76] 	/home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json
+ DEBUG [739c5b76] 	
+ DEBUG [739c5b76] 	/home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest-ebbf77c503f8375d5afc4558774311af.json
+ DEBUG [739c5b76] 	
+ DEBUG [739c5b76] Finished in 0.221 seconds with exit status 0 (successful).
+  INFO [1dbd3aea] Running /usr/bin/env cp /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json  /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest-ebbf77c503f8375d5afc4558774311af.json /home/cctv_deployer/apps/cctvserver/releases/20190425102439/assets_manifest_backup on 134.209.154.250
+ DEBUG [1dbd3aea] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && /usr/bin/env cp /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest-b181cb1ab08a63af3e44b6cb1415c9e8.json  /home/cctv_deployer/apps/cctvserver/releases/20190425102439/public/assets/.sprockets-manifest-ebbf77c503f8375d5afc4558774311af.json /home/cctv_deployer/apps/cctvserver/releases/20190425102439/assets_manifest_backup
+  INFO [fb426559] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [c49ce614] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [c49ce614] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425102439; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425102439'" 1>&2; false; fi
+ DEBUG [78a79b73] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [7deb4444] Running bundle exec rake db:migrate on 134.209.154.250
+ DEBUG [7deb4444] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425102439 && ( export RAILS_ENV="production" ; bundle exec rake db:migrate )
+ DEBUG [43ef88f6] 	rake aborted!
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	ActiveRecord::NoDatabaseError: Unknown database 'cctvserver_production'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/mysql2_adapter.rb:26:in `rescue in mysql2_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/mysql2_adapter.rb:12:in `mysql2_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_handling.rb:90:in `connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv
+ DEBUG [43ef88f6] 	_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/usr/local/bin/bundle:23:in `load'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/usr/local/bin/bundle:23:in `<main>'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	Caused by:
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	Mysql2::Error: Unknown database 'cctvserver_production'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/mysql2-0.5.2/lib/mysql2/client.rb:90:in `connect'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/mysql2-0.5.2/lib/mysql2/client.rb:90:in `initialize'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib
+ DEBUG [43ef88f6] 	/active_record/connection_handling.rb:90:in `connection'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/tasks/database_tasks.rb:172:in `migrate'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/railties/databases.rake:60:in `block (2 levels) in <main>'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/home/cctv_deployer/apps/cctvserver/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/usr/local/bin/bundle:23:in `load'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	/usr/local/bin/bundle:23:in `<main>'
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	Tasks: TOP => db:migrate
+ DEBUG [43ef88f6] 	
+ DEBUG [43ef88f6] 	(See full trace by running task with --trace)
+ DEBUG [43ef88f6] 	
