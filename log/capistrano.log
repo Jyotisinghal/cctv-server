@@ -681,3 +681,648 @@ remote: Compressing objects:   0% (1/2957)   [Kremote: Compressing objects:   
   INFO ---------------------------------------------------------------------------
   INFO [9047ed93] Running /usr/bin/env mkdir -p /tmp on 134.209.154.250
  DEBUG [9047ed93] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-04-25 15:39:45 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [cd9e7894] Running /usr/bin/env mkdir -p /tmp on 134.209.154.250
+ DEBUG [cd9e7894] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f48de089] Finished in 1.718 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cctvserver-production-smarttechno.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cctvserver-production-smarttechno.sh 100.0%
+  INFO [6fea1eab] Running /usr/bin/env chmod 700 /tmp/git-ssh-cctvserver-production-smarttechno.sh on 134.209.154.250
+ DEBUG [6fea1eab] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cctvserver-production-smarttechno.sh
+  INFO [082acc96] Finished in 0.170 seconds with exit status 0 (successful).
+  INFO [b98787d2] Running /usr/bin/env git ls-remote git@github.com:Jyotisinghal/cctv-server.git HEAD on 134.209.154.250
+ DEBUG [b98787d2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git ls-remote git@github.com:Jyotisinghal/cctv-server.git HEAD )
+ DEBUG [d34e3c49] 	89f10d11dd7d24fdf1d04f38597172f856bf00a4
+ DEBUG [d34e3c49] 		HEAD
+  INFO [d34e3c49] Finished in 3.255 seconds with exit status 0 (successful).
+  INFO [57da17f6] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared /home/cctv_deployer/apps/cctvserver/releases on 134.209.154.250
+ DEBUG [57da17f6] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared /home/cctv_deployer/apps/cctvserver/releases
+  INFO [26d9ddd8] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [7a3191e6] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/shared/public/assets on 134.209.154.250
+ DEBUG [7a3191e6] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/shared/public/assets
+  INFO [e40b2917] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [e8755b82] Running [ -f /home/cctv_deployer/apps/cctvserver/current/REVISION ] on 134.209.154.250
+ DEBUG [e8755b82] Command: [ -f /home/cctv_deployer/apps/cctvserver/current/REVISION ]
+ DEBUG [34ca0fa7] Finished in 0.179 seconds with exit status 1 (failed).
+ DEBUG [753444ce] Running [ -f /home/cctv_deployer/apps/cctvserver/repo/HEAD ] on 134.209.154.250
+ DEBUG [753444ce] Command: [ -f /home/cctv_deployer/apps/cctvserver/repo/HEAD ]
+ DEBUG [c30c0c8c] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/cctv_deployer/apps/cctvserver/repo
+ DEBUG [4abddf64] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [4abddf64] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [1f3d8cd8] Finished in 0.511 seconds with exit status 0 (successful).
+  INFO [e1b340ac] Running /usr/bin/env git remote set-url origin git@github.com:Jyotisinghal/cctv-server.git on 134.209.154.250
+ DEBUG [e1b340ac] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git remote set-url origin git@github.com:Jyotisinghal/cctv-server.git )
+  INFO [d19b58d6] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [a0729fd2] Running /usr/bin/env git remote update --prune on 134.209.154.250
+ DEBUG [a0729fd2] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1345a043] 	Fetching origin
+ DEBUG [1345a043] 	
+ DEBUG [1345a043] 	remote: Enumerating objects: 1959, done.[K
+ DEBUG [1345a043] 	
+ DEBUG [1345a043] 	remote: Counting objects:   0% (1/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   1% (20/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   2% (40/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   3% (59/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   4% (79/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   5% (98/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   6% (118/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   7% (138/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   8% (157/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:   9% (177/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  10% (196/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  11% (216/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  12% (236/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  13% (255/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  14% (275/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  15% (294/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  16% (314/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  17% (334/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  18% (353/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  19% (373/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  20% (392/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  21% (412/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  22% (431/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  23% (451/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  24% (471/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  25% (490/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  26% (510/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  27% (529/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  28% (549/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  29% (569/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  30% (588/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  31% (608/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  32% (627/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  33% (647/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  34% (667/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  35% (686/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  36% (706/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  37% (725/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  38% (745/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  39% (765/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  40% (784/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  41% (804/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  42% (823/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  43% (843/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  44% (862/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  45% (882/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  46% (902/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  47% (921/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  48% (941/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  49% (960/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  50% (980/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  51% (1000/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  52% (1019/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  53% (1039/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  54% (1058/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  55% (1078/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  56% (1098/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  57% (1117/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  58% (1137/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  59% (1156/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  60% (1176/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  61% (1195/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  62% (1215/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  63% (1235/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  64% (1254/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  65% (1274/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  66% (1293/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  67% (1313/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  68% (1333/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  69% (1352/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  70% (1372/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  71% (1391/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  72% (1411/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  73% (1431/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  74% (1450/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  75% (1470/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  76% (1489/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  77% (1509/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  78% (1529/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  79% (1548/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  80% (1568/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  81% (1587/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  82% (1607/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  83% (1626/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  84% (1646/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  85% (1666/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  86% (1685/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  87% (1705/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  88% (1724/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  89% (1744/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  90% (1764/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  91% (1783/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  92% (1803/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  93% (1822/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  94% (1842/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  95% (1862/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  96% (1881/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  97% (1901/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  98% (1920/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects:  99% (1940/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects: 100% (1959/1959)   [K
+ DEBUG [1345a043] 	remote: Counting objects: 100% (1959/1959), done.[K
+ DEBUG [1345a043] 	
+ DEBUG [1345a043] 	remote: Compressing objects:   0% (1/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   1% (6/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   2% (12/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   3% (18/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   4% (24/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   5% (30/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   6% (36/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   7% (41/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   8% (47/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:   9% (53/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  10% (59/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  11% (65/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  12% (71/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  13% (77/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  14% (82/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  15% (88/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  16% (94/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  17% (100/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  18% (106/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  19% (112/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  20% (117/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  21% (123/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  22% (129/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  23% (135/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  24% (141/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  25% (147/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  26% (153/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  27% (158/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  28% (164/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  29% (170/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  30% (176/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  31% (182/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  32% (188/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  33% (194/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  34% (199/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  35% (205/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  36% (211/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  37% (217/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  38% (223/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  39% (229/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  40% (234/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  41% (240/585)   [Kremote: Compressing objects:  42% (246/585)   [Kremote: Compressing objects:  43% (252/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  44% (258/585)   [Kremote: Compressing objects:  45% (264/585)   [Kremote: Compressing objects:  46% (270/585)   [Kremote: Compressing objects:  47% (275/585)   [Kremote: Compressing objects:  48% (281/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  49% (287/585)   [Kremote: Compressing objects:  50% (293/585)   [Kremote: Compressing objects:  51% (299/585)   [Kremote: Compressing objects:  52% (305/585)   [Kremote: Compressing objects:  53% (311/585)   [Kremote: Compressing objects:  54% (316/585)   [Kremote: Compressing objects:  55% (322/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  56% (328/585)   [Kremote: Compressing objects:  57% (334/585)   [Kremote: Compressing objects:  58% (340/585)   [Kremote: Compressing objects:  59% (346/585)   [Kremote: Compressing objects:  60% (351/585)   [Kremote: Compressing objects:  61% (357/585)   [Kremote: Compressing objects:  62% (363/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  63% (369/585)   [Kremote: Compressing objects:  64% (375/585)   [Kremote: Compressing objects:  65% (381/585)   [Kremote: Compressing objects:  66% (387/585)   [Kremote: Compressing objects:  67% (392/585)   [Kremote: Compressing objects:  68% (398/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  69% (404/585)   [Kremote: Compressing objects:  70% (410/585)   [Kremote: Compressing objects:  71% (416/585)   [Kremote: Compressing objects:  72% (422/585)   [Kremote: Compressing objects:  73% (428/585)   [Kremote: Compressing objects:  74% (433/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  75% (439/585)   [Kremote: Compressing objects:  76% (445/585)   [Kremote: Compressing objects:  77% (451/585)   [Kremote: Compressing objects:  78% (457/585)   [Kremote: Compressing objects:  79% (463/585)   [Kremote: Compressing objects:  80% (468/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  81% (474/585)   [Kremote: Compressing objects:  82% (480/585)   [Kremote: Compressing objects:  83% (486/585)   [Kremote: Compressing objects:  84% (492/585)   [Kremote: Compressing objects:  85% (498/585)   [Kremote: Compressing objects:  86% (504/585)   [Kremote: Compressing objects:  87% (509/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  88% (515/585)   [Kremote: Compressing objects:  89% (521/585)   [Kremote: Compressing objects:  90% (527/585)   [Kremote: Compressing objects:  91% (533/585)   [Kremote: Compressing objects:  92% (539/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  93% (545/585)   [Kremote: Compressing objects:  94% (550/585)   [Kremote: Compressing objects:  95% (556/585)   [Kremote: Compressing objects:  96% (562/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects:  97% (568/585)   [Kremote: Compressing objects:  98% (574/585)   [Kremote: Compressing objects:  99% (580/585)   [Kremote: Compressing objects: 100% (585/585)   [K
+ DEBUG [1345a043] 	remote: Compressing objects: 100% (585/585), done.[K
+ DEBUG [1345a043] 	Receiving objects:   0% (1/1807)   
+ DEBUG [1345a043] 	Receiving objects:   1% (19/1807)   
+ DEBUG [1345a043] 	Receiving objects:   2% (37/1807)   
+ DEBUG [1345a043] 	Receiving objects:   3% (55/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:   4% (73/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:   5% (91/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:   6% (109/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:   7% (127/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:   8% (145/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:   9% (163/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  10% (181/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  11% (199/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  12% (217/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  13% (235/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  14% (253/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  15% (272/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  16% (290/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  16% (292/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  17% (308/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  18% (326/1807), 284.00 KiB | 470.00 KiB/s   
+ DEBUG [1345a043] 	Receiving objects:  19% (344/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  20% (362/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  21% (380/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  22% (398/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  23% (416/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  24% (434/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  25% (452/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  26% (470/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  27% (488/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  28% (506/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  29% (525/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  30% (543/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  31% (561/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  32% (579/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  33% (597/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  34% (615/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  35% (633/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  36% (651/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  37% (669/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  38% (687/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  39% (705/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  40% (723/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  41% (741/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  42% (759/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  43% (778/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  44% (796/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  45% (814/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  46% (832/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  47% (850/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  48% (868/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  49% (886/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  50% (904/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  51% (922/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  52% (940/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  53% (958/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  54% (976/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  55% (994/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  56% (1012/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  57% (1030/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  58% (1049/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  59% (1067/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  60% (1085/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  61% (1103/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  62% (1121/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  63% (1139/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  64% (1157/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  65% (1175/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  66% (1193/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  67% (1211/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  68% (1229/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  69% (1247/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  70% (1265/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  71% (1283/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  72% (1302/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  73% (1320/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  74% (1338/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  75% (1356/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  76% (1374/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  77% (1392/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  78% (1410/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  79% (1428/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  80% (1446/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  81% (1464/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  82% (1482/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  83% (1500/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  84% (1518/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  85% (1536/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  86% (1555/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  87% (1573/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  88% (1591/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  89% (1609/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  90% (1627/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  91% (1645/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  92% (1663/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  93% (1681/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  94% (1699/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  95% (1717/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  96% (1735/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  97% (1753/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  98% (1771/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	Receiving objects:  99% (1789/1807), 1.44 MiB | 1.31 MiB/s   
+ DEBUG [1345a043] 	remote: Total 1807 (delta 1222), reused 1807 (delta 1222), pack-reused 0[K
+ DEBUG [1345a043] 	
+ DEBUG [1345a043] 	Receiving objects: 100% (1807/1807), 5.42 MiB | 3.39 MiB/s   
+ DEBUG [1345a043] 	Receiving objects: 100% (1807/1807), 5.42 MiB | 3.39 MiB/s, done.
+ DEBUG [1345a043] 	
+ DEBUG [1345a043] 	Resolving deltas:   0% (0/1222)   
+ DEBUG [1345a043] 	Resolving deltas:   1% (17/1222)   
+ DEBUG [1345a043] 	Resolving deltas:   7% (92/1222)   
+ DEBUG [1345a043] 	Resolving deltas:   8% (100/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  15% (185/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  17% (216/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  18% (223/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  30% (369/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  35% (437/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  36% (440/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  41% (509/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  46% (566/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  53% (659/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  56% (686/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  57% (697/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  58% (710/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  60% (739/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  61% (755/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  62% (762/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  63% (777/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  65% (804/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  66% (810/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  68% (834/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  69% (853/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  70% (856/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  72% (890/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  73% (893/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  74% (909/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  75% (920/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  77% (944/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  78% (961/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  79% (968/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  80% (978/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  81% (990/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  82% (1005/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  83% (1015/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  84% (1029/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  85% (1039/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  86% (1051/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  87% (1064/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  88% (1076/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  89% (1088/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  90% (1100/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  91% (1113/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  92% (1125/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  93% (1137/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  94% (1149/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  95% (1161/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  96% (1174/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  97% (1186/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  98% (1198/1222)   
+ DEBUG [1345a043] 	Resolving deltas:  99% (1210/1222)   
+ DEBUG [1345a043] 	Resolving deltas: 100% (1222/1222)   
+ DEBUG [1345a043] 	Resolving deltas: 100% (1222/1222), completed with 150 local objects.
+ DEBUG [1345a043] 	
+ DEBUG [1345a043] 	From github.com:Jyotisinghal/cctv-server
+ DEBUG [1345a043] 	
+ DEBUG [1345a043] 	   5cfd4a2f..89f10d11  master     -> master
+ DEBUG [1345a043] 	
+  INFO [1345a043] Finished in 5.816 seconds with exit status 0 (successful).
+ DEBUG [bc50a70c] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [bc50a70c] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [cf35ba17] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO [ecb61d9b] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425100952 on 134.209.154.250
+ DEBUG [ecb61d9b] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425100952 )
+  INFO [f8925a9f] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO [fe4c625e] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/cctv_deployer/apps/cctvserver/releases/20190425100952 on 134.209.154.250
+ DEBUG [fe4c625e] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/cctv_deployer/apps/cctvserver/releases/20190425100952 )
+  INFO [2502db73] Finished in 2.722 seconds with exit status 0 (successful).
+ DEBUG [1c4dceb1] Running if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [1c4dceb1] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/repo; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/repo'" 1>&2; false; fi
+ DEBUG [16c14c1c] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [7d9c27d2] Running /usr/bin/env git rev-list --max-count=1 master on 134.209.154.250
+ DEBUG [7d9c27d2] Command: cd /home/cctv_deployer/apps/cctvserver/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cctvserver-production-smarttechno.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [896840fd] 	89f10d11dd7d24fdf1d04f38597172f856bf00a4
+ DEBUG [896840fd] 	
+ DEBUG [896840fd] Finished in 0.180 seconds with exit status 0 (successful).
+ DEBUG [c74270fe] Running if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425100952'" 1>&2; false; fi on 134.209.154.250
+ DEBUG [c74270fe] Command: if test ! -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952; then echo "Directory does not exist '/home/cctv_deployer/apps/cctvserver/releases/20190425100952'" 1>&2; false; fi
+ DEBUG [002e2f11] Finished in 0.228 seconds with exit status 0 (successful).
+  INFO [4e48b842] Running /usr/bin/env echo "89f10d11dd7d24fdf1d04f38597172f856bf00a4" >> REVISION on 134.209.154.250
+ DEBUG [4e48b842] Command: cd /home/cctv_deployer/apps/cctvserver/releases/20190425100952 && /usr/bin/env echo "89f10d11dd7d24fdf1d04f38597172f856bf00a4" >> REVISION
+  INFO [13f08b33] Finished in 0.167 seconds with exit status 0 (successful).
+ DEBUG [f86ea050] Running [ -f /etc/nginx/sites-enabled/default ] on 134.209.154.250
+ DEBUG [f86ea050] Command: [ -f /etc/nginx/sites-enabled/default ]
+ DEBUG [57ca5c5a] Finished in 0.165 seconds with exit status 1 (failed).
+  INFO [d570d3d4] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/config on 134.209.154.250
+ DEBUG [d570d3d4] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/shared/config
+  INFO [4101e209] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf 100.0%
+  INFO copying: #<StringIO:0x00007f23e8100820> to: /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types 100.0%
+  INFO copying: #<StringIO:0x00007f23e8130ca0> to: /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/database.yml 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/database.yml 100.0%
+  INFO copying: #<StringIO:0x00007f23e815d660> to: /home/cctv_deployer/apps/cctvserver/shared/config/database.yml
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation 100.0%
+  INFO copying: #<StringIO:0x00007f23e818e8a0> to: /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/monit 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/monit 100.0%
+  INFO copying: #<StringIO:0x00007f23e81b7bb0> to: /home/cctv_deployer/apps/cctvserver/shared/config/monit
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb 100.0%
+  INFO copying: #<StringIO:0x00007f23e820f220> to: /home/cctv_deployer/apps/cctvserver/shared/config/unicorn.rb
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh 100.0%
+  INFO copying: #<StringIO:0x000055b8b42ef2d0> to: /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh
+ DEBUG Uploading /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases 0.0%
+  INFO Uploading /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases 100.0%
+  INFO copying: #<StringIO:0x000055b8b4726178> to: /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases
+ DEBUG [3aaeb6a6] Running [ -f /etc/nginx/sites-enabled/cctvserver ] on 134.209.154.250
+ DEBUG [3aaeb6a6] Command: [ -f /etc/nginx/sites-enabled/cctvserver ]
+ DEBUG [21eb2b6e] Finished in 0.178 seconds with exit status 0 (successful).
+  INFO [3c062eba] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf /etc/nginx/sites-enabled/cctvserver on 134.209.154.250
+ DEBUG [3c062eba] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.conf /etc/nginx/sites-enabled/cctvserver
+  INFO [8454a2ca] Finished in 0.188 seconds with exit status 0 (successful).
+ DEBUG [387cfb4d] Running [ -f /etc/nginx/mime.types ] on 134.209.154.250
+ DEBUG [387cfb4d] Command: [ -f /etc/nginx/mime.types ]
+ DEBUG [47852e84] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO [1d65bf1e] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types /etc/nginx/mime.types on 134.209.154.250
+ DEBUG [1d65bf1e] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/nginx.mime.types /etc/nginx/mime.types
+  INFO [04144238] Finished in 0.185 seconds with exit status 0 (successful).
+ DEBUG [0ed96d55] Running [ -f /etc/init.d/unicorn_cctvserver ] on 134.209.154.250
+ DEBUG [0ed96d55] Command: [ -f /etc/init.d/unicorn_cctvserver ]
+ DEBUG [8a41eac0] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [75fd6c1a] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh /etc/init.d/unicorn_cctvserver on 134.209.154.250
+ DEBUG [75fd6c1a] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/unicorn_init.sh /etc/init.d/unicorn_cctvserver
+  INFO [bc1128e5] Finished in 0.190 seconds with exit status 0 (successful).
+ DEBUG [07cebd75] Running [ -f /etc/logrotate.d/cctvserver ] on 134.209.154.250
+ DEBUG [07cebd75] Command: [ -f /etc/logrotate.d/cctvserver ]
+ DEBUG [a5f9be01] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [910074d7] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation /etc/logrotate.d/cctvserver on 134.209.154.250
+ DEBUG [910074d7] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/log_rotation /etc/logrotate.d/cctvserver
+  INFO [d18a8748] Finished in 0.194 seconds with exit status 0 (successful).
+ DEBUG [bb682507] Running [ -f .bash_aliases ] on 134.209.154.250
+ DEBUG [bb682507] Command: [ -f .bash_aliases ]
+ DEBUG [6cafc554] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [86220616] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases .bash_aliases on 134.209.154.250
+ DEBUG [86220616] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/user_aliases .bash_aliases
+  INFO [29acf3d8] Finished in 0.186 seconds with exit status 0 (successful).
+ DEBUG [a32f4c58] Running [ -f /home/cctv_deployer/apps/cctvserver/releases/20190425100952/config/database.yml ] on 134.209.154.250
+ DEBUG [a32f4c58] Command: [ -f /home/cctv_deployer/apps/cctvserver/releases/20190425100952/config/database.yml ]
+ DEBUG [81cafb4f] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [7012b30e] Running /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/database.yml /home/cctv_deployer/apps/cctvserver/releases/20190425100952/config/database.yml on 134.209.154.250
+ DEBUG [7012b30e] Command: /usr/bin/env sudo ln -nfs /home/cctv_deployer/apps/cctvserver/shared/config/database.yml /home/cctv_deployer/apps/cctvserver/releases/20190425100952/config/database.yml
+  INFO [9a54d615] Finished in 0.185 seconds with exit status 0 (successful).
+  INFO [b9a7b293] Running /usr/bin/env sudo /etc/init.d/nginx reload on 134.209.154.250
+ DEBUG [b9a7b293] Command: /usr/bin/env sudo /etc/init.d/nginx reload
+ DEBUG [77d7c8f5] 	[....] 
+ DEBUG [77d7c8f5] 	Reloading nginx configuration (via systemctl): nginx.service
+ DEBUG [77d7c8f5] 	[?25l
+ DEBUG [77d7c8f5] 	7
+ DEBUG [77d7c8f5] 	[1G
+ DEBUG [77d7c8f5] 	[[32m ok [39;49m
+ DEBUG [77d7c8f5] 	8
+ DEBUG [77d7c8f5] 	[?12l[?25h
+ DEBUG [77d7c8f5] 	.
+ DEBUG [77d7c8f5] 	
+  INFO [77d7c8f5] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [6a32c8bf] Running /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425100952 /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp /home/cctv_deployer/apps/cctvserver/releases/20190425100952/vendor /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public on 134.209.154.250
+ DEBUG [6a32c8bf] Command: /usr/bin/env mkdir -p /home/cctv_deployer/apps/cctvserver/releases/20190425100952 /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp /home/cctv_deployer/apps/cctvserver/releases/20190425100952/vendor /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public
+  INFO [12b41bd8] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [423eff01] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/log ] on 134.209.154.250
+ DEBUG [423eff01] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/log ]
+ DEBUG [37b91554] Finished in 0.178 seconds with exit status 1 (failed).
+ DEBUG [9c6cafe8] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/log ] on 134.209.154.250
+ DEBUG [9c6cafe8] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/log ]
+ DEBUG [034b6225] Finished in 0.169 seconds with exit status 0 (successful).
+  INFO [bf762645] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425100952/log on 134.209.154.250
+ DEBUG [bf762645] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425100952/log
+  INFO [ab119470] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [09f9a952] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/releases/20190425100952/log on 134.209.154.250
+ DEBUG [09f9a952] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/log /home/cctv_deployer/apps/cctvserver/releases/20190425100952/log
+  INFO [5d1d3483] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [f9d893fc] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/pids ] on 134.209.154.250
+ DEBUG [f9d893fc] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/pids ]
+ DEBUG [36a632b1] Finished in 0.180 seconds with exit status 1 (failed).
+ DEBUG [db54fe0d] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/pids ] on 134.209.154.250
+ DEBUG [db54fe0d] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/pids ]
+ DEBUG [b9cfeb83] Finished in 0.368 seconds with exit status 1 (failed).
+  INFO [8384ec0e] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/pids on 134.209.154.250
+ DEBUG [8384ec0e] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/pids /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/pids
+  INFO [b2ddc1af] Finished in 0.177 seconds with exit status 0 (successful).
+ DEBUG [f54c96b1] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/cache ] on 134.209.154.250
+ DEBUG [f54c96b1] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/cache ]
+ DEBUG [113b3d66] Finished in 0.167 seconds with exit status 1 (failed).
+ DEBUG [86414996] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/cache ] on 134.209.154.250
+ DEBUG [86414996] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/cache ]
+ DEBUG [b7872456] Finished in 0.175 seconds with exit status 0 (successful).
+  INFO [ea4bf7a3] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/cache on 134.209.154.250
+ DEBUG [ea4bf7a3] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/cache
+  INFO [42a515a6] Finished in 0.890 seconds with exit status 0 (successful).
+  INFO [e5bff277] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/cache on 134.209.154.250
+ DEBUG [e5bff277] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/cache /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/cache
+  INFO [e4aba9a3] Finished in 0.175 seconds with exit status 0 (successful).
+ DEBUG [51a5459f] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/sockets ] on 134.209.154.250
+ DEBUG [51a5459f] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/sockets ]
+ DEBUG [8074edb0] Finished in 0.173 seconds with exit status 1 (failed).
+ DEBUG [6efc40e0] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/sockets ] on 134.209.154.250
+ DEBUG [6efc40e0] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/sockets ]
+ DEBUG [e8b44247] Finished in 0.169 seconds with exit status 1 (failed).
+  INFO [223ba66c] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/sockets on 134.209.154.250
+ DEBUG [223ba66c] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/tmp/sockets /home/cctv_deployer/apps/cctvserver/releases/20190425100952/tmp/sockets
+  INFO [e82dbaa8] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [fb10a6ae] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/vendor/bundle ] on 134.209.154.250
+ DEBUG [fb10a6ae] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/vendor/bundle ]
+ DEBUG [440d232e] Finished in 0.174 seconds with exit status 1 (failed).
+ DEBUG [e495c87d] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/vendor/bundle ] on 134.209.154.250
+ DEBUG [e495c87d] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/vendor/bundle ]
+ DEBUG [0713c7ea] Finished in 0.176 seconds with exit status 1 (failed).
+  INFO [57d8ef42] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/releases/20190425100952/vendor/bundle on 134.209.154.250
+ DEBUG [57d8ef42] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/vendor/bundle /home/cctv_deployer/apps/cctvserver/releases/20190425100952/vendor/bundle
+  INFO [d31499ee] Finished in 0.170 seconds with exit status 0 (successful).
+ DEBUG [33bc63bc] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/system ] on 134.209.154.250
+ DEBUG [33bc63bc] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/system ]
+ DEBUG [7a32240d] Finished in 0.167 seconds with exit status 1 (failed).
+ DEBUG [bbbbae7d] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/system ] on 134.209.154.250
+ DEBUG [bbbbae7d] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/system ]
+ DEBUG [d5e368b6] Finished in 0.175 seconds with exit status 1 (failed).
+  INFO [e4d7ead1] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/system on 134.209.154.250
+ DEBUG [e4d7ead1] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/system /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/system
+  INFO [6f92f2de] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [c099b404] Running [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/assets ] on 134.209.154.250
+ DEBUG [c099b404] Command: [ -L /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/assets ]
+ DEBUG [1ffa54b7] Finished in 0.178 seconds with exit status 1 (failed).
+ DEBUG [088143a0] Running [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/assets ] on 134.209.154.250
+ DEBUG [088143a0] Command: [ -d /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/assets ]
+ DEBUG [18aeba4f] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [9754aa0b] Running /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/assets on 134.209.154.250
+ DEBUG [9754aa0b] Command: /usr/bin/env rm -rf /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/assets
+  INFO [8d4e9684] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [77ba7803] Running /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/assets /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/assets on 134.209.154.250
+ DEBUG [77ba7803] Command: /usr/bin/env ln -s /home/cctv_deployer/apps/cctvserver/shared/public/assets /home/cctv_deployer/apps/cctvserver/releases/20190425100952/public/assets
+  INFO [e4c76980] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [bb34f163] Running RAILS_ENV=production bundle exec rake assets:precompile as smarttechno@localhost
+ DEBUG [bb34f163] Command: RAILS_ENV=production bundle exec rake assets:precompile
+ DEBUG [a3d8e899] 	rake aborted!
+ DEBUG [a3d8e899] 	LoadError: Error loading the 'mysql2' Active Record adapter. Missing a gem it depends on? mysql2 is not part of the bundle. Add it to your Gemfile.
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/rubygems_integration.rb:408:in `block (2 levels) in replace_gem'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/connection_adapters/mysql2_adapter.rb:6:in `<main>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `block in require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:257:in `load_dependency'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/connection_adapters/connection_specification.rb:191:in `spec'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:956:in `establish_connection'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/connection_handling.rb:60:in `establish_connection'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/railtie.rb:136:in `block (2 levels) in <class:Railtie>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:71:in `instance_eval'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:71:in `block in execute_hook'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:62:in `with_execution_control'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:67:in `execute_hook'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:43:in `block in on_load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:42:in `each'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:42:in `on_load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/railtie.rb:132:in `block in <class:Railtie>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/initializable.rb:32:in `instance_exec'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/initializable.rb:32:in `run'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/initializable.rb:61:in `block in run_initializers'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/initializable.rb:60:in `run_initializers'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/application.rb:361:in `initialize!'
+ DEBUG [a3d8e899] 	/home/smarttechno/cctv-server/config/environment.rb:5:in `<main>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `block in require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:257:in `load_dependency'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/application.rb:337:in `require_environment!'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli.rb:463:in `exec'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli.rb:18:in `start'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/friendly_errors.rb:124:in `with_friendly_errors'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/exe/bundle:22:in `<top (required)>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/bundle:23:in `load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/bundle:23:in `<main>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `eval'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [a3d8e899] 	
+ DEBUG [a3d8e899] 	Caused by:
+ DEBUG [a3d8e899] 	Gem::LoadError: mysql2 is not part of the bundle. Add it to your Gemfile.
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/rubygems_integration.rb:408:in `block (2 levels) in replace_gem'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/connection_adapters/mysql2_adapter.rb:6:in `<main>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `block in require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:257:in `load_dependency'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/connection_adapters/connection_specification.rb:191:in `spec'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:956:in `establish_connection'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/connection_handling.rb:60:in `establish_connection'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/railtie.rb:136:in `block (2 levels) in <class:Railtie>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:71:in `instance_eval'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:71:in `block in execute_hook'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:62:in `with_execution_control'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:67:in `execute_hook'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:43:in `block in on_load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:42:in `each'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:42:in `on_load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/railtie.rb:132:in `block in <class:Railtie>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/initializable.rb:32:in `instance_exec'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/initializable.rb:32:in `run'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/initializable.rb:61:in `block in run_initializers'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/initializable.rb:60:in `run_initializers'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/application.rb:361:in `initialize!'
+ DEBUG [a3d8e899] 	/home/smarttechno/cctv-server/config/environment.rb:5:in `<main>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `block in require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:257:in `load_dependency'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/application.rb:337:in `require_environment!'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli.rb:463:in `exec'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/cli.rb:18:in `start'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/lib/bundler/friendly_errors.rb:124:in `with_friendly_errors'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/gems/bundler-2.0.1/exe/bundle:22:in `<top (required)>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/bundle:23:in `load'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/bundle:23:in `<main>'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `eval'
+ DEBUG [a3d8e899] 	/home/smarttechno/.rvm/gems/ruby-2.6.1/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [a3d8e899] 	Tasks: TOP => environment
+ DEBUG [a3d8e899] 	(See full trace by running task with --trace)
