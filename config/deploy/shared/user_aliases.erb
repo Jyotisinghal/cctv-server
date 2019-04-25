@@ -1,0 +1,19 @@
+alias pun='cd <%= current_path %>'
+alias llog='tail -f <%= current_path %>/log/<%= fetch(:rails_env) %>.log'
+alias rest='sudo restart <%=fetch(:application)%>-web'
+alias wor='ps aux | grep ruby | grep sidekiq'
+alias workclean='sudo stop <%= fetch(:application) %>-worker'
+alias workstart='sudo start <%= fetch(:application) %>-worker'
+alias workrestart='sudo restart <%= fetch(:application) %>-worker'
+alias fmem="echo 'flush_all' | nc localhost 11211"
+alias ng="cd /etc/nginx/sites-enabled"
+alias nrest="sudo service nginx restart"
+#
+# Git aliases
+#
+alias gd='git diff'
+alias gs='git status'
+alias gg='git grep -n'
+#
+alias rc="cd <%= current_path %>; script/rails console"
+alias rd="cd <%= current_path %>; script/rails db"
