@@ -47,7 +47,10 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  adapter: postgresql
+  adapter: mysql2
+  database: cctv_deployer_production
+  username: cctv_deploy
+  password: <%= ENV["DATABASE_PASSWORD"] %>
